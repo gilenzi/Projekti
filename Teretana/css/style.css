@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: rgba(0,0,0,0.9);
+	margin:0;
+	font-family: 'Montserrat','PT Serif', sans-serif;
+}
+
+.welcome-image img{
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	filter: blur(10px);
+	transition: all 1s ease;
+}
+
+.showcase img:hover{
+	filter: blur(0px);
+	transition: all 1s ease;
+}
+
+#logo{
+	height: 200px;
+	width: 200px;
+	transition: background 1s ease;
+}
+
+.content{
+	width: 100%;
+	height:20%;
+	position: absolute;
+	top: 70%;
+	text-align: center;
+	transition: all 1s ease;
+}
+
+.content h1{
+	font-size: 2rem;
+	color: #d3d8e0;
+	margin-right: 2%;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 10px black;
+}
+
+.naslov{
+	font-size: 3rem;
+	padding: 5%;
+	font-weight: 600;
+	letter-spacing: 5px;
+	color: #fff;
+	text-align: center;
+	font-family: 'PT Serif', sans-serif;
+}
+
+.kontejner{
+	background-color: rgba(0,0,0,0.5);
+	height: 100% !important;
+	width: 70%;
+	margin: 0 auto;
+	
+}
+
+.paragraf{
+	text-align: center;
+	padding: 2%;
+	color: #fff;
+	font-size: 2em;
+}
+
+.paragrafi{
+	padding: 1.5%;
+	text-align: center;
+	color: #fff;
+	font-size: 1.3rem;
+}
+
+.slike{
+	width: 100%;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+}
+
+.paralex1{
+	position: relative;
+	width: 100%;
+	min-height: 400px !important;
+	background-image: url(../images/gym-image-5.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+section{
+	height: 30%;
+	padding: 4% 0;
+}
+
+section h1{
+	font-size: 1.5rem;
+}
+
+.slike img{
+	width: 10%;
+	height: 10%;
+	margin: 10px;
+	border-radius: 50%;
+}
+
+footer{
+	background: linear-gradient(orange,red);
+	width: 100%;
+	margin-top: 5%;
+}
+
+footer div ion-icon{
+	width: 40px;
+	height: 40px;
+	color: #fff;
+}
+
+@media(min-width: 400px) and (max-width: 1000px){
+	.d-flex{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.paragrafi{
+		text-align: left;
+		font-size: 1.3rem;
+	}
+
+}
+
