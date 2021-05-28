@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+  --countryCardSize: 47%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #e0e2e4;
+}
+
+.box {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: red;
+}
+input {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  width: 340px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"] {
+  position: relative;
+  left: -5px;
+  border-radius: 0 25px 25px 0;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #ff5722;
+}
+
+.flags-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60vh;
+  width: 50%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.flag {
+  width: 100%;
+  height: 50%;
+}
+
+.flag img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.country {
+  width: var(--countryCardSize);
+  height: 100%;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.about-country {
+  width: 88%;
+  height: 50%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.country-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.country-continent {
+  font-size: 1.2rem;
+}
+
+.country-currency,
+.country-language,
+.contry-population {
+  display: flex;
+  width: 50%;
+}
+
+.contry-population {
+  margin-top: 1rem;
+}
+
+.country-currency p,
+.country-language p,
+.contry-population p {
+  font-size: 1.3rem;
+}
+
+.contry-population p {
+  margin-left: 1.3rem;
+}
+.country-language p {
+  margin-left: 2rem;
+}
+.country-currency p {
+  margin-left: 2.5rem;
+}
+
+.country-currency i,
+.country-language i,
+.contry-population i {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.contry-population i {
+  color: orange;
+}
+
+.country-language i {
+  color: rgb(0, 119, 255);
+}
+.country-currency i {
+  color: rgb(10, 161, 10);
+}
+
+@media only screen and (max-width: 1000px) {
+  .flags-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .country {
+    width: 80%;
+    margin: 1em 0;
+  }
+}
