@@ -244,7 +244,6 @@ btnLogin.addEventListener('click', function (e) {
     currentAccount = accounts.find(
         acc => acc.username === inputLoginUsername.value
     );
-    console.log(currentAccount);
 
     if (currentAccount?.pin === Number(inputLoginPin.value)) {
         // Display UI and message
@@ -364,7 +363,7 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
     e.preventDefault();
-    displayMovements(currentAccount.movements, !sorted);
+    displayMovements(currentAccount, !sorted);
     sorted = !sorted;
 });
 
