@@ -1,0 +1,65 @@
+.stats {
+  &__container {
+    width: 50rem;
+    max-width: 100%;
+    margin: 3em auto;
+    padding: 1em;
+  }
+
+  &__date {
+    color: $color-white;
+    font-size: clamp(2rem, 7vw, 2.4rem);
+    text-align: center;
+  }
+
+  &__total {
+    display: block;
+    font-size: clamp(3rem, 7vw, 6rem);
+    padding-bottom: 0.5em;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__income {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    background-color: $color-income;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    padding: 1em;
+    margin-bottom: 1em;
+    &--value {
+      display: block;
+      color: $color-white;
+      margin-right: 1em;
+    }
+  }
+
+  &__expenses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-expense;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    padding: 1em;
+    border-radius: 0.3rem;
+
+    &--container {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+    }
+    &--value {
+      align-items: center;
+      color: $color-white;
+      margin-right: 0.5em;
+    }
+    &--percentage {
+      background-color: rgba($color-white, 0.6);
+      padding: 0.5em;
+      font-size: 1.2rem;
+      margin-left: 0.2em;
+      border-radius: 0.3rem;
+    }
+  }
+}

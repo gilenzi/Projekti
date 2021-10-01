@@ -1,0 +1,66 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: $color-grey-dark-3;
+  padding: 5rem 0;
+
+  &__logo-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+    margin: 4rem auto;
+    @include respond(phone) {
+      & {
+        width: 25rem;
+      }
+    }
+  }
+
+  &__list {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    list-style: none;
+    border-top: 1px solid $color-white;
+  }
+  &__item {
+    padding: 0.6rem 0;
+    &:not(:last-child) {
+      margin-right: 1.3rem;
+    }
+    // white-space: nowrap;
+  }
+  &__link {
+    display: block;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-grey-dark-3;
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.5);
+      color: $color-primary-dark;
+      transform: rotate(5deg) scale(1.1);
+    }
+  }
+  &__copyright {
+    width: 60%;
+    color: $color-white;
+    font-size: $default-font-size;
+    padding: 1rem;
+    margin: 0 auto;
+    border-top: 1px solid $color-white;
+  }
+}

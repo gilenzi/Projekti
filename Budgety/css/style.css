@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem; }
+
+.stats__container {
+  width: 50rem;
+  max-width: 100%;
+  margin: 3em auto;
+  padding: 1em; }
+
+.stats__date {
+  color: #fff;
+  font-size: clamp(2rem, 7vw, 2.4rem);
+  text-align: center; }
+
+.stats__total {
+  display: block;
+  font-size: clamp(3rem, 7vw, 6rem);
+  padding-bottom: 0.5em;
+  color: #fff;
+  text-align: center; }
+
+.stats__income {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.3rem;
+  background-color: #0abab5;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  padding: 1em;
+  margin-bottom: 1em; }
+  .stats__income--value {
+    display: block;
+    color: #fff;
+    margin-right: 1em; }
+
+.stats__expenses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ce2029;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  padding: 1em;
+  border-radius: 0.3rem; }
+  .stats__expenses--container {
+    display: flex;
+    align-items: center; }
+  .stats__expenses--value {
+    align-items: center;
+    color: #fff;
+    margin-right: 0.5em; }
+  .stats__expenses--percentage {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5em;
+    font-size: 1.2rem;
+    margin-left: 0.2em;
+    border-radius: 0.3rem; }
+
+.calculation__form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.calculation__form.expense > * {
+  border: 0.2rem solid #ce2029; }
+
+.calculation__form.expense .calculation__btn i {
+  color: #ce2029 !important; }
+
+.calculation__form.income > * {
+  border: 0.2rem solid #0abab5; }
+
+.calculation__form > * {
+  flex: 1 1;
+  margin: 1rem 1rem; }
+
+.calculation__form > * {
+  border: 0.2rem solid transparent;
+  transition: all 0.3s ease; }
+
+.calculation__select, .calculation__desc, .calculation__value, .calculation__btn, .calculation__select--currency {
+  outline: none;
+  border-radius: 0.3rem;
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+  border: 0.2rem solid #d3d3d3;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.2); }
+
+.calculation__select--currency {
+  width: 10rem; }
+
+.calculation__select {
+  width: 7rem;
+  height: 4rem; }
+
+.calculation__desc {
+  width: 30rem;
+  height: 4rem;
+  padding-left: 0.5rem; }
+
+.calculation__value {
+  width: 8rem;
+  height: 4rem;
+  border-radius: 0.3rem;
+  padding-left: 0.5rem; }
+
+.calculation__error-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(5rem);
+  color: #b00020;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease; }
+
+.calculation__error-text.appear {
+  visibility: visible;
+  transform: translateY(3rem);
+  opacity: 1;
+  border: none; }
+
+.calculation__btn {
+  background: none;
+  border: none !important;
+  box-shadow: none; }
+  .calculation__btn i {
+    color: green;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+  .calculation__btn i:hover {
+    transform: translateY(-0.3rem); }
+  .calculation__btn i:active {
+    transform: translateY(0); }
+
+.display__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.display__expense, .display__income {
+  width: 60rem;
+  padding: 3rem; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+  .table__header {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+  .table__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #e8e8e8;
+    padding: 0.7rem; }
+    .table__row:not(:first-child):nth-child(odd) {
+      background-color: #e8e8e8; }
+    .table__row:hover .table__data--delete {
+      visibility: visible;
+      opacity: 1;
+      display: inline-block;
+      transform: translate(0, 0.3rem); }
+  .table__data {
+    flex: 1 1;
+    padding: 1rem 0.3rem; }
+    .table__data--delete {
+      display: inline-block;
+      cursor: pointer;
+      transform: translate(2rem, 0.3rem);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease; }
+      .table__data--delete i {
+        font-size: 2rem; }
+  .table__data--value {
+    text-align: right; }
+  .table--income .table__header,
+  .table--income .table__data--value {
+    color: #0abab5;
+    font-weight: 500; }
+  .table--expense .table__header,
+  .table--expense .table__data--value {
+    color: #ce2029;
+    font-weight: 500; }
+  .table--expense .table__data--value .stats__expenses--percentage {
+    display: inline-block;
+    background-color: #b31b1b;
+    color: #fff;
+    border-radius: 0.3rem; }
+
+body {
+  overflow-x: hidden; }
+
+.section-stats {
+  background: url(../../images/background-2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 25%;
+  padding: 1em; }
+
+.section-calculation {
+  width: 100%;
+  background-color: #e8e8e8; }
+
+.calculation__container {
+  width: 80rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0; }
+
+.section-display {
+  width: 100%;
+  margin: 2rem auto; }

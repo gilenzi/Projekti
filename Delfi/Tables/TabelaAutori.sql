@@ -1,0 +1,21 @@
+USE [ProjekatSQL_Delfi]
+GO
+
+/****** Object:  Table [dbo].[Autori]    Script Date: 2/21/2021 4:20:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Autori](
+	[AutorID] [int] IDENTITY(1,1) NOT NULL,
+	[Ime] [nvarchar](40) NOT NULL,
+	[Prezime] [nvarchar](40) NOT NULL,
+ CONSTRAINT [PK_Autori] PRIMARY KEY CLUSTERED 
+(
+	[AutorID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+

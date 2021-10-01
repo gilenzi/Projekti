@@ -1,0 +1,152 @@
+.heading-secondary {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  // top: 10%;
+  transform: translateX(-50%);
+  font-size: clamp(2rem, 5vw, 6rem);
+  color: #252839;
+  -webkit-text-stroke: 0.1rem #383d52;
+  text-transform: uppercase;
+}
+
+.heading-secondary::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: $color-heading;
+  -webkit-text-stroke: 0rem $color-heading;
+  border-right: 0.2rem solid $color-heading;
+  overflow: hidden;
+  animation: skillsAnimate 6s linear infinite;
+}
+
+.html {
+  font-size: clamp(4rem, 5vw, 6rem);
+  letter-spacing: 0.5rem;
+  color: $color-html;
+
+  & span {
+    display: inline-block;
+    color: $color-white;
+    transform: translateY(2rem);
+
+    &:nth-child(2) {
+      animation: html 4s linear infinite;
+      backface-visibility: hidden;
+    }
+  }
+}
+
+.css {
+  &-box {
+    text-align: center;
+  }
+
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: 0.5rem;
+  color: $color-css;
+
+  &-paragraph {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.wordpress {
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: 0.5rem;
+
+  & span {
+    &:nth-child(1) {
+      display: inline-block;
+      transform: translateY(1rem);
+      background: -webkit-linear-gradient(
+        left bottom,
+        $color-white,
+        $color-wordpress
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:nth-child(2) {
+      display: inline-block;
+      background: -webkit-linear-gradient(
+        left bottom,
+        $color-wordpress,
+        $color-white
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.bootstrap {
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: 0.5rem;
+  color: #6f11ee;
+  text-transform: uppercase;
+  & span {
+    display: inline-block;
+  }
+}
+
+.js {
+  font-size: clamp(4rem, 7vw, 7rem);
+  letter-spacing: 0.5rem;
+
+  & span:nth-child(1) {
+    color: $color-js;
+  }
+}
+
+.text-about {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  background: -webkit-linear-gradient(
+    left bottom,
+    $color-white,
+    $color-wordpress
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
+  letter-spacing: 0.3rem;
+}
+
+.contact-me {
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  padding: 2rem 0;
+  background: -webkit-linear-gradient(
+    left bottom,
+    $color-white,
+    $color-wordpress
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
+  letter-spacing: 0.3rem;
+}
+
+.contact-email {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  background: -webkit-linear-gradient(
+    left bottom,
+    $color-white,
+    $color-wordpress
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
+  letter-spacing: 0.3rem;
+}

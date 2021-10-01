@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #3494e4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 500px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container > * {
+  flex: 1 1 auto;
+}
+
+.container h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8em;
+}
+.heading {
+  margin-top: 2em;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.bottle {
+  position: relative;
+  width: 30%;
+  height: 330px;
+  max-width: 100%;
+  margin: 10px auto;
+  border: 4px solid #144fc6;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 40px 40px;
+}
+
+.remaind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.liters {
+  /* display: block; */
+  color: #144fc6;
+  font-weight: bold;
+  font-size: 2.2em;
+}
+
+.glasses {
+  width: 90%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.glass.full {
+  background-color: #6ab3f8;
+  color: #fff;
+}
+
+.glass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border: 4px solid #144fc6;
+  border-radius: 0 0 15px 15px;
+  background-color: #fff;
+  color: #144fc6;
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.container p {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bottle p {
+  color: #144fc6;
+}
+
+.bottle-full {
+  border-radius: 0 0 35px 35px;
+  font-size: 2em;
+  color: #144fc6;
+  background-color: #6ab3f8;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+@media only screen and (max-width: 465px) {
+  .container {
+    height: 100%;
+  }
+
+  .bottle {
+    width: 40%;
+  }
+
+  .glass {
+    flex: 1 1 calc(33.3333% - 20px);
+  }
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: rgb(8,12,62);
+}
+
+#title{
+    position: relative;
+    top: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.clock{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 750px;
+    position: relative;
+    top: 300px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0009);
+}
+
+.hours,
+.minutes,
+.seconds{
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BACKGROUNDS */
+.hours,
+.minutes{
+    background-color: rgb(4, 160, 207);
+}
+.seconds{
+    background-color: rgb(224, 6, 115);
+}
+.minutes{
+    margin: 5px 5px;
+}
+
+/* INSIDE BLOCKS */
+.digits{
+    position: relative;
+    top: 15%;
+    display: block;
+    align-self: center;
+    font-size: 5rem;
+    color: #fff;
+}   
+      
+.label{
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.analogClock{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.analogClock:hover{
+    font-size: 1.6rem;
+}

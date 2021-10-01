@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: purple;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  width: 50%;
+  max-width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  margin: 20px;
+}
+
+.card i {
+  color: #fff;
+  font-size: 4em;
+}
+
+.card span {
+  font-size: 3em;
+  color: #fff;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1.2em;
+  color: #fff;
+}

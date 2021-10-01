@@ -1,0 +1,28 @@
+body {
+  overflow-x: hidden;
+}
+
+.section-stats {
+  background: url(../../images/background-2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 25%;
+  padding: 1em;
+}
+
+.section-calculation {
+  width: 100%;
+  background-color: $color-gray;
+}
+
+.calculation__container {
+  width: 80rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.section-display {
+  width: 100%;
+  margin: 2rem auto;
+}

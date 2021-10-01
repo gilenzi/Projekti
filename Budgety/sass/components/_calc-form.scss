@@ -1,0 +1,94 @@
+.calculation {
+  &__form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__form.expense > * {
+    border: 0.2rem solid $color-expense;
+  }
+  &__form.expense .calculation__btn i {
+    color: $color-expense !important;
+  }
+  &__form.income > * {
+    border: 0.2rem solid $color-income;
+  }
+  &__form > * {
+    flex: 1 1;
+    margin: 1rem 1rem;
+  }
+  &__form > * {
+    border: 0.2rem solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  &__select,
+  &__desc,
+  &__value,
+  &__btn,
+  &__select--currency {
+    outline: none;
+    border-radius: 0.3rem;
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
+    border: 0.2rem solid #d3d3d3;
+    box-shadow: 0.3rem 0.3rem 0.4rem rgba($color: #000000, $alpha: 0.2);
+  }
+  &__select--currency {
+    width: 10rem;
+  }
+  &__select {
+    width: 7rem;
+    height: 4rem;
+  }
+
+  &__desc {
+    width: 30rem;
+    height: 4rem;
+    padding-left: 0.5rem;
+  }
+  &__value {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 0.3rem;
+    padding-left: 0.5rem;
+  }
+
+  &__error-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(5rem);
+    color: $color-error;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &__error-text.appear {
+    visibility: visible;
+    transform: translateY(3rem);
+    opacity: 1;
+    border: none;
+  }
+
+  &__btn {
+    // width: 5rem;
+    background: none;
+    border: none !important;
+    box-shadow: none;
+
+    & i {
+      color: green;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    & i:hover {
+      transform: translateY(-0.3rem);
+    }
+    & i:active {
+      transform: translateY(0);
+    }
+  }
+}

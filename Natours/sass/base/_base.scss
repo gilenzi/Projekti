@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  //Defines what 1rem is
+  font-size: 62.5%; // 1rem = 10px; 10px/16px * 100 = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200
+    font-size: 56.25%; // 1 rem = 9px; 9px/16px * 100 =  56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900
+    font-size: 50%; //1 rem = 8px; 8px/16px * 100 = 50%
+  }
+
+  @include respond(tab-phone) {
+    // width < 600
+    font-size: 30%; //1 rem = 8px; 8px/16px * 100 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12; 12/16;
+  }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+main {
+  background-color: #f7f7f7;
+}

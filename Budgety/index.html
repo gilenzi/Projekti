@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="js/app.js" defer></script>
+    <title>Budgety</title>
+</head>
+<body>
+    <section class="section-stats">
+        <div class="stats__container">
+            <h3 class="stats__date">Available Budget in </h3>
+            <span class="stats__total">+ 3,0002.58</span>
+            <div class="stats__income">
+                <p class="stats__income--text">Income</p>
+                <span class="stats__income--value">+ 4,000.00</span>
+            </div>
+            <div class="stats__expenses">
+                <p class="stats__expenses--text">Expenses</p>
+                <div class="stats__expenses--container">
+                    <span class="stats__expenses--value">-997.42</span>
+                    <span class="stats__expenses--percentage">65%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-calculation">
+        <div class="calculation__container">
+            <form action="#" class="calculation__form">
+                <select  class="calculation__select--currency">
+                    <option class="calculation__option" value="RSD" selected disabled hidden>Currency</option>
+                    <option class="calculation__option" value="RSD">Rsd</option>
+                    <option class="calculation__option" value="EUR">Eur</option>
+                    <option class="calculation__option" value="USD">Dollar</option>
+                </select>
+                <select  class="calculation__select">
+                    <option class="calculation__option" value="income">+</option>
+                    <option class="calculation__option" value="expense">-</option>
+                </select>
+                <input type="text" class="calculation__desc" placeholder="Add description" >
+                <input type="number" min="0" class="calculation__value" placeholder="Value" >
+
+                <button class="calculation__btn">
+                    <i class="far fa-check-circle"></i>
+                </button>
+                <p class="calculation__error-text">All fileds must be filled!</p>
+            </form>
+        </div>
+    </section>
+
+    <section class="section-display">
+        <div class="display__container">
+            <div class="display__income">
+                <table class="table table--income">
+               
+                        <th class="table__header">Income</th>
+             
+                    <!-- <tr class="table__row">
+                        <td class="table__data table__data--desc">Website project</td>
+                        <td class="table__data table__data--value">+ 2,500.00
+                            <span class="table__data--delete"><i class="far fa-times-circle"></i></span>
+                        </td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data table__data--desc">Sold car</td>
+                        <td class="table__data table__data--value">+ 1,500.00
+                            <span class="table__data--delete"><i class="far fa-times-circle"></i></span>
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class="display__expense">
+                <table class="table table--expense">
+                    <tr class="table__row">
+                        <th class="table__header">Expense</th>
+                    </tr>
+                    <!-- <tr class="table__row">
+                        <td class="table__data table__data--desc">Rent</td>
+                        <td class="table__data table__data--value">- 930.00
+                            <span class="table__data--delete"><i class="far fa-times-circle"></i></span>
+                        </td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data table__data--desc">Groceries</td>
+                        <td class="table__data table__data--value">-150.00 
+                        <span class="stats__expenses--percentage">23%</span>
+                        <span class="table__data--delete"><i class="far fa-times-circle"></i></span>
+                    </td>
+                        
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

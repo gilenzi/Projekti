@@ -1,0 +1,105 @@
+.display {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__expense,
+  &__income {
+    width: 60rem;
+    padding: 3rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__header {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid $color-gray;
+    padding: 0.7rem;
+    &:not(:first-child):nth-child(odd) {
+      background-color: $color-gray;
+    }
+
+    // &__row.delete {
+    //   transform: translateY(8rem) rotateZ(20deg);
+    //   opacity: 0;
+    //   transition: 0.7s ease;
+    // }
+
+    &:hover .table__data--delete {
+      visibility: visible;
+      opacity: 1;
+      display: inline-block;
+      transform: translate(0, 0.3rem);
+    }
+  }
+  &__data {
+    flex: 1 1;
+    padding: 1rem 0.3rem;
+
+    &--delete {
+      display: inline-block;
+      cursor: pointer;
+      transform: translate(2rem, 0.3rem);
+      opacity: 0;
+      visibility: hidden;
+
+      transition: all 0.4s ease;
+      & i {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__data--value {
+    text-align: right;
+  }
+
+  &--income {
+    & .table__header,
+    .table__data--value {
+      color: $color-income;
+      font-weight: 500;
+    }
+  }
+  &--expense {
+    & .table__header,
+    .table__data--value {
+      color: $color-expense;
+      font-weight: 500;
+    }
+    .table__data--value .stats__expenses--percentage {
+      display: inline-block;
+      background-color: #b31b1b;
+      color: $color-white;
+      border-radius: 0.3rem;
+    }
+  }
+}
+
+// &__header {
+//     // width: 100%;
+//     text-align: left;
+//     text-transform: uppercase;
+//     font-size: 2rem;
+//     // border-bottom: 1px solid #333;
+//   }
+//   &__row:nth-child(even) {
+//     background-color: #ddd;
+//     // border: 1px solid red;
+//     // border-bottom: 1px solid #333;
+//     // width: 100%;
+//   }
+//   &__data {
+//   }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <title>Hangman</title>
+</head>
+<body>
+    <h1 class="title">Hangman</h1>
+    <p class="about-game">Find the hidden word - Enter a letter</p>
+
+    <div class="game-container">
+        <!-- Rod -->
+        <svg height="250" width="200" class="figure-container">
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <line x1="60" y1="20" x2="60" y2="230" />
+        <line x1="20" y1="230" x2="100" y2="230" />
+
+        <!-- Head -->
+        <circle cx="140" cy="70" r="20" class="figure-part" />
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+        <!-- Left arm -->
+        <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+        <!-- Right arm -->
+        <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+        <!-- Legs -->
+        <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        </svg>
+
+        <div class="wrong-letters">
+            <h2>Wrong</h2>
+            <div class="wrong-letters-container">
+                <!-- <span class="wrong-letter">a</span>
+                <span class="wrong-letter">e</span>
+                <span class="wrong-letter">u</span> -->
+            </div>
+        </div>
+    </div>
+    <div class="word-container">
+        <div class="word">
+            <!-- <span class="letter">B</span> -->
+            <!-- <span class="letter">O</span> -->
+            <!-- <span class="letter">O</span> -->
+            <!-- <span class="letter">K</span> -->
+        </div>
+
+    </div>
+
+    <div class="notification-container">
+        <p class="notification-msg">You have already entered this letter</p>
+    </div>
+
+    <div class="popup-overlay-lose">
+        <div class="popup-container">
+            <p>Unfortunataly you lost. 😕</p>
+            <button class="btn-play-again">Play again</button>
+        </div>
+    </div>
+    <div class="popup-overlay-win">
+        <div class="popup-container">
+            <p>You WIN!!. 😊</p>
+            <button class="btn-play-again">Play again</button>
+        </div>
+    </div>
+</body>
+</html>

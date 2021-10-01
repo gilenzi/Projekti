@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: rgb(255, 136, 136);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 136, 136, 1) 0%,
+    rgba(255, 227, 230, 1) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  max-width: 100%;
+  height: 100%;
+  padding: 30px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+.container h2 {
+  color: rgb(99, 97, 97);
+  margin: 1.4em 0;
+}
+
+#textarea {
+  border: none;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1.3rem;
+}
+
+.tags {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: block;
+  background-color: #fff;
+  margin: 5px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  flex: 1 1 80px;
+}
+
+.highlight {
+  color: #fff;
+  background-color: rgb(250, 74, 74);
+}

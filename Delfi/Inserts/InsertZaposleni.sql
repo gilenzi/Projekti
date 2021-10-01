@@ -1,0 +1,60 @@
+use ProjekatSQL_Delfi
+GO 
+
+INSERT dbo.Zaposleni
+VALUES
+('Dragas','Jankelic','0622361881','Drage Spasic 135'),
+('Dragan','Jankelin','0628458505','Dr Dragoljuba Sretenovica 159'),	
+('Dositej','Janicic','0630668010','Dostojevskog 269'),	
+('Dorotej','Janicijevic','0650372142','Djordja Tasica 127'),	
+('Dojcin','Janicevic','0643525758','Djordja Ognjanovica 39'),	
+('Dojcilo','Janic','0630614637','Branka sotre 1998'),	
+('Dobroslav','Janikic','0638643212','Branka Cvetkovica 168'),	
+('Dobrosav','Janekovic','0644766787','Brace Skerovica 614'),	
+('Dobromir','Jandric','0657222460','Brace Lamijer 158'),	
+('Dobromil','Janaskovic','0627586416','Beogradskog Bataljona 165'),	
+('Dobroljub','Janackovic','0645133865','Belog Bagrema 92'),	
+('Dobrivoje','Janackovic','0633637642','Bele Vode 49'),	
+('Dobrivoj','Jamina','0651386766','Bate Vukanovic 662'),	
+('Dobrica','Jamedžija','0631324220','Vladimira Rolovica 1694'),	
+('Dobrinko','Jamandilovic','0642315785','Vladimira Radovanovica 31'),	
+('Dobrimir','Jalic','0645416740','Vladimira Matijevica 14'),	
+('Dobrilo','Jaksic','0617617003','Vladimira Dujica 131'),	
+('Dobrica','Jakonic','0627068667','Vladimira copica 75'),	
+('Dobrasin','Jakovcevic','0628072454','Slobodana Principa Selje 142'),	
+('Dmitar','Jakovovic','0633226071','Slobodana Perovica 72'),	
+('Dimitrije','Jakovljevic','0624664452','Slobodana Aligrudica 28'),
+('Dimitar','Jakovljev','0654515078','Slavonskih Brigada 18'),	
+('Dimco','Jakisic','0630688268','Sinise Stankovica 25'),	
+('Despot','Jakic','0618044550','Stevana Luburica 15'),	
+('Desimir','Jajcanin','0615634728','Stevana Filipovica 81'),	
+('Denis','Jajic','0615818457','Stevana Djurdjevica 6'),	
+('Deka','Jaic','0611102202','Stevana Brakusa 18'),	
+('Dejan','Jazic','0645362872','Stanka Opsenice 12'),	
+('Davorin','Jadranin','0657025620','Mirka Postica 7'),	
+('Davor','Jagodic','0615125278','Mira Popare 34'),	
+('David','Jaglicic','0637430315','Milovana Celebica 67'),	
+('Daroslav','Jaglica','0614258024','Milosava Vlajica 85'),	
+('Darko','Javoric','0617684711','Milorada Jovanovica 88'),	
+('Darjan','Javorina','0637811467','Miloja Zakica 28'),	
+('Dario','Javorac','0610643762','Milisava Dakica 181'),	
+('Darijo','Jablanovic','0623554548','Mile Jevtovic 193'),	
+('Darije','Jablanov','0626652531','Milana Stanivukovica 49'),	
+('Danojlo','Velimanovic ','0642752054','Milana sarca 706'),	
+('Danko','Veledinovic ','0658087280','Milana Minjasa 145'),	
+('Danilo','Velasevic ','0644324062','Milana Milovanovica 62'),	
+('Danijel','Vekovic ','0647722641','Milana Kuca 195'),	
+('Dane','Vejnovic ','0613535465','Milana Jovanovica 53'),	
+('Dancul','Vejinovic ','0637634752','Milana Delica 59'),	
+('Damljan','Veinovic ','0612226063','Milana Dedinca 29'),	
+('Damjan','Veizovic ','0611410438','Mike Mitrovica 169'),	
+('Damir','Vezurovic ','0648574841','Mije Oreskog 115'),	
+('Dalibor','Vatricevic ','0613703665','Mihajla Valtrovica 164'),	
+('Dabo','Vatovic ','0650782682','Matije Bana 107'),	
+('Dabiziv','Vatazevic ','0636275767','Mate Jerkovica 58'),	
+('Dabisa','Vasojevic ','0624482844','Marka Koncara Bure 16');
+
+select * from dbo.Zaposleni;
+
+
+

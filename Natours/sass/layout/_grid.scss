@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+.col-1-of-2 {
+  flex: 1 1 40rem;
+  margin: 1rem;
+}
+
+.col-1-of-3 {
+  flex-basis: 40rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+}
+
+.col-1-of-4 {
+  flex-basis: 30rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  transform: skewY(7deg);
+}
+
+.section-features .row,
+.section-tours .row {
+  justify-content: center;
+}

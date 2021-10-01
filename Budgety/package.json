@@ -1,0 +1,15 @@
+{
+  "name": "budgety",
+  "version": "1.0.0",
+  "description": "Application about expenses and incomes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "gilenzi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

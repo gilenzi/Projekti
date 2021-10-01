@@ -1,0 +1,328 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  width: 40rem;
+  margin: 5rem;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50rem;
+    color: #fff;
+    transition: all 1s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-butcher-primary,
+          $color-butcher-secondary
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-gym-primary,
+          $color-gym-secondary
+        );
+      }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+      &-5 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-bankist-primary,
+          $color-bankist-secondary
+        );
+      }
+      &-6 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-geolocationApp-primary,
+          $color-geolocationApp-secondary
+        );
+      }
+      &-7 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+      &-8 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-9 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-wordpress, 0.85)
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    background-position: center;
+    height: 90% !important;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../../img/budgety-cover.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-butcher-primary,
+          $color-butcher-secondary
+        ),
+        url(../../img/butcher-shop-cover.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-gym-primary, 0.85),
+          rgba($color-gym-secondary, 0.85)
+        ),
+        url(../../img/gym-cover.jpg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        ),
+        url(../../img/movies-app-cover.jpg);
+    }
+    &--5 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-bankist-primary, 0.85),
+          rgba($color-bankist-secondary, 0.85)
+        ),
+        url(../../img/bankist-cover.jpg);
+    }
+    &--6 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-geolocationApp-primary, 0.85),
+          rgba($color-geolocationApp-secondary, 0.85)
+        ),
+        url(../../img/geolocation-app-cover.jpg);
+    }
+    &--7 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        ),
+        url(../../img/mini-projects-cover.jpg);
+    }
+    &--8 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85)
+        ),
+        url(../../img/natours-cover.jpg);
+    }
+    &--9 {
+      background-position: center;
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-white, 0.85),
+          rgba($color-wordpress, 0.85)
+        ),
+        url(../../img/wordpress-cover.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-butcher-primary, 0.85),
+        rgba($color-butcher-secondary, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-gym-primary, 0.85),
+        rgba($color-gym-secondary, 0.85)
+      );
+    }
+    &--4 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+    &--5 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-bankist-primary, 0.85),
+        rgba($color-bankist-secondary, 0.85)
+      );
+    }
+    &--6 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-geolocationApp-primary, 0.85),
+        rgba($color-geolocationApp-secondary, 0.85)
+      );
+    }
+    &--7 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+    &--8 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+    &--9 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-wordpress, 0.85)
+      );
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+
+    &__heading {
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      text-align: left;
+    }
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 0.3rem;
+
+      &--back {
+        transform: rotateY(0) translateY(1rem);
+        width: 100%;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -6rem;
+      }
+
+      &--back-9 {
+        transform: rotateY(0deg) translateY(1rem);
+        clip-path: polygon(0 15%, 100% 10%, 100% 100%, 0 100%);
+        margin-top: -10rem;
+      }
+      &--front {
+        height: 40rem;
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      width: 90%;
+      transform: translate(0);
+      width: 100%;
+      text-align: center;
+      padding: 6rem 4rem 4rem 4rem;
+    }
+  }
+}
