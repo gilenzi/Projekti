@@ -215,7 +215,7 @@ header p {
   position: relative;
   height: 90vh;
   width: 100vw;
-  background: url("images/photo-1.jpg");
+  background: url("../images/photo-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -241,7 +241,7 @@ header p {
   position: relative;
   height: 70%;
   width: 70%;
-  background: url("images/photo-1.jpg");
+  background: url("../images/photo-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -319,6 +319,123 @@ header p {
 .page-btn[disabled] {
   opacity: 0.3;
 }
+
+/* REGISTER FORM */
+.registar-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 111;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.open {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+  transform-origin: 0% 75%;
+}
+
+.close-register-form {
+  position: absolute;
+  display: block;
+  right: -2.5rem;
+  top: -1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.registar-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30rem;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0rem 0.4rem 0.8rem rgba(255, 255, 255, 0.4);
+}
+
+.registar-form h2 {
+  text-transform: uppercase;
+  color: royalblue;
+  margin-bottom: 1rem;
+}
+.registar-form__group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.registar-form__label {
+  margin: 0.5rem 0;
+}
+.registar-form__field {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  outline: none;
+  border: 2px solid #999;
+  transition: border 0.3s ease-in-out;
+}
+
+.registar-form__field:focus {
+  border: 2px solid royalblue;
+}
+
+.registar-form__button {
+  width: 90%;
+  margin: auto;
+  outline: none;
+  background-color: royalblue;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1.3rem;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  border-radius: 1rem;
+}
+
+.registar-form__group.success .registar-form__eror-msg {
+  display: none;
+}
+.registar-form__group.success .registar-form__field {
+  border: 2px solid green;
+}
+
+.registar-form__group.error .registar-form__eror-msg {
+  display: block;
+}
+.registar-form__group.error .registar-form__field {
+  border: 2px solid #e74c3c;
+}
+
+.registar-form__eror-msg {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* .registar-form__button:focus {
+  outline: none;
+} */
+
 @media only screen and (max-width: 780px) {
   .search {
     display: none;

@@ -16,6 +16,97 @@ const sliderContainer = document.querySelector('.slider-container');
 const sliderView = document.querySelector('.slider-view');
 const btns = document.querySelectorAll('.btn');
 
+// Registar Form
+const registarContainer = document.querySelector('.registar-form-container');
+const registarLink = document.querySelector('.registar-link');
+const registarForm = document.querySelector('.registar-form');
+const closeBtn = document.querySelector('.close-register-form');
+const username = document.querySelector('.registar-form__field--username');
+const email = document.querySelector('.registar-form__field--email');
+const password = document.querySelector('.registar-form__field--password');
+const password2 = document.querySelector('.registar-form__field--confirm-passowrd');
+
+
+function showError(input,msg){
+    const formField = input.parentElement;
+    const small = formField.querySelector('.registar-form__eror-msg');
+    small.textContent = msg;
+    formField.classList = 'registar-form__group error';
+}
+
+function showSuccess(input){
+    const formField = input.parentElement;
+    formField.classList = 'registar-form__group success';
+}
+
+function isValidEmail(input){
+    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+    ;
+    if(re.test(input.value.trim())){
+        showSuccess(input);
+    }else{
+        showError(input,`Email is not valid`);
+    }
+}
+
+function generateName(input){
+    const start = input.classList[1].indexOf('--') + 2;
+    let elText = input.classList[1].slice(start);
+    elText = elText.charAt(0).toUpperCase() + elText.slice(1);
+
+    return elText
+}
+
+function checkRequired(inputArr){
+    inputArr.forEach(el => {
+        if(el.value.trim() === ''){
+            showError(el,`${generateName(el)} is required filed`);
+        }else{
+            showSuccess(el);
+        }
+    });
+}
+
+function checkLength(input,min,max){
+    if(input.value.length < min){
+        showError(input,`${generateName(input)} must be at least ${min} characters`)
+    }else if(input.value.length > max){
+        showError(input,`${generateName(input)} must be less than ${max} characters`)
+    }
+    else{
+        showSuccess(input);
+    }
+}
+
+function comparePasswords(pass1, pass2){
+    if(pass1.value === pass2.value && pass1.value != '' || pass2.value != ''){
+        showSuccess(pass2);
+    }else{
+        showError(pass2,`Passwords do not match`);
+    }
+}
+
+// EVENT LISTENERS
+// Opening form
+registarLink.addEventListener('click',() =>{
+    registarContainer.classList.add('open');
+});
+
+// Closing form
+closeBtn.addEventListener('click',(e) =>{
+    registarContainer.classList.remove('open');
+});
+
+
+registarForm.addEventListener('submit',(e) => {
+    e.preventDefault();
+    checkRequired([username, email, password, password2]);
+    checkLength(username,3,15);
+    checkLength(password,6,25);
+    isValidEmail(email);
+    comparePasswords(password,password2);
+});
+
 
 const pageNumbers = (total, max, current) => {
     const half = Math.floor(max / 2);
@@ -32,7 +123,6 @@ const pageNumbers = (total, max, current) => {
     return Array.from({length: max}, (_, i) => (i + 1) + from);
   }
 
-// console.log(pageNumbers(100,10,98));
 
 // GETTING DATA
 async function getMovies(url){
@@ -145,7 +235,7 @@ function generateGradeClass(grade){
 let imgNumber = 1;
 
 function changeImg(counter){
-    let path = `images/photo-${counter}.jpg`;
+    let path = `../images/photo-${counter}.jpg`;
 
     sliderView.style.backgroundImage  = `url('${path}')`;
     sliderContainer.style.backgroundImage  = `url('${path}')`;
@@ -168,12 +258,9 @@ btns[1].addEventListener('click',() => {
 function headerAppear(entries){
     if(!entries[0].isIntersecting){
         header.classList.add('appear');
-        // console.log(11)
     }else{
         header.classList.remove('appear');
-
     }
-    // console.log(entries[0])
 }
 
 const observerOptions = {
