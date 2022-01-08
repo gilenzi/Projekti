@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="app.js" defer></script>
+
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="password-generator">
+        <h2 class="password-generator__title">Password Generator</h2>
+        <form class="password-generator__form">
+            <input type="text" class="password-generator__input">
+            <button class="password-generator__btn password-generator__btn--copy">
+                <i class="fas fa-copy"></i>
+            </button>
+        </form>
+        <div class="password-generator__form-field">
+            <label for="password-length" class="password-generator__label">Password Length</label>
+            <input type="number" name="password-length" value="5" min="5" max ="20" class="password-generator__password-length">
+        </div>
+        <div class="password-generator__form-field">
+            <label for="uppercase" class="password-generator__label">Include uppercase letters</label>
+            <input type="checkbox" checked name="uppercase" class="password-generator__checkbox password-generator__checkbox--uppercase">
+        </div>
+        <div class="password-generator__form-field">
+            <label for="lowercase" class="password-generator__label">Include lowercase letters</label>
+            <input type="checkbox" checked name="lowercase" class="password-generator__checkbox password-generator__checkbox--lowercase">
+        </div>
+        <div class="password-generator__form-field">
+            <label for="numbers" class="password-generator__label">Include numbers</label>
+            <input type="checkbox" checked name="numbers" class="password-generator__checkbox password-generator__checkbox--numbers">
+        </div>
+        <div class="password-generator__form-field">
+            <label for="symbols" class="password-generator__label">Include symbols</label>
+            <input type="checkbox" checked name="symbols" class="password-generator__checkbox password-generator__checkbox--symbols">
+        </div>
+        <div class="password-generator__form-field">
+            <button class="password-generator__btn password-generator__btn--generate">Generate Password</button>
+        </div>
+    </div>
+</body>
+</html>
