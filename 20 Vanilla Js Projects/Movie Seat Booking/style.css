@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Press+Start+2P&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #06283D;
+    font-family: 'Roboto', sans-serif;
+}
+
+.o-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-booking{
+    padding: 1rem;
+    perspective: 1000px;
+    max-width: 500px;
+}
+
+.movie-booking__movie-selector-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie-booking__movie-selector-wrapper p {
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.movie-booking__legend{
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: beige;
+}
+.movie-booking__legend-option{
+    display: flex;
+    align-items: center;
+}
+
+.movie-booking__legend-icon{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-color: #4B5D67;
+    border-radius: 100% 100% 0 0;
+    margin-right: 0.5rem;
+}
+.movie-booking__legend-icon--selected{
+    background-color: aquamarine;
+}
+.movie-booking__legend-icon--occupied{
+    background-color: #fff;
+}
+
+.movie-booking__canvas{
+    width: 90%;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px#fff;
+    margin: 1rem auto;
+    transform: rotateX(-45deg);
+}
+
+.movie-booking__seats-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.movie-booking__column:not(:last-child){
+    margin-right: 0.5rem;
+}
+.movie-booking__column--1,
+.movie-booking__column--3{
+    width: 200px;
+}
+.movie-booking__column--2{
+    /* width: calc(500px - 400px); */
+    width: 600px;
+}
+
+.movie-booking__seat{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-color: #4B5D67;
+    border-radius: 100% 100% 0 0;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+.movie-booking__seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.movie-booking__seat.occupied{
+    background-color: #fff;
+}
+.movie-booking__seat.selected{
+    background-color: aquamarine;
+}
+
+.movie-booking__billing-text{
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tawk-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../app.js",
+  "scripts": {
+    "serve": "cp -R src/assets dist/assets && parcel serve src/index.html"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}

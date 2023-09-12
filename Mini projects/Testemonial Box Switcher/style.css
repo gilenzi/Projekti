@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(231,226,223);
+  background: linear-gradient(140deg, rgba(231,226,223,0.2) 13%, rgba(126,149,247,0.5) 100%);
+}
+
+
+.testemonial{
+  position: relative;
+  background-color: rgb(66, 84, 167);
+  border-radius: 7px;
+  padding: 1rem 2.5rem;
+  padding-top: 2rem;
+  width: 500px;
+  overflow: hidden;
+}
+
+.testemonial.is-switching .testemonial__container{
+  animation: appear 1s ease forwards;
+}
+
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    transform: scale(1.09);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+
+  }
+}
+
+
+.progress{
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  animation: widthAnimation 5s linear infinite;
+}
+
+
+@keyframes widthAnimation {
+  from{
+    height: 3px;
+    width: 0;
+  }
+
+  to{
+    height: 3px;
+    width: 100%;
+  }
+}
+
+.fa-quote-left,
+.fa-quote-right{
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.fa-quote-left{
+  left: 0;
+  transform: translateX(-130%);
+}
+.fa-quote-right{
+  top: 0;
+  right: 0;
+  transform: translateX(130%);
+}
+
+
+.testemonial__container{
+  position: relative;
+}
+
+.testemonial__text{
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.testemonial__profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  width: auto;
+}
+
+.testemonial__image{
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.testemonial__about{
+  color: #fff;
+  font-size: 0.8rem;
+}

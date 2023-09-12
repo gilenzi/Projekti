@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Press+Start+2P&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+#intro-section,
+#select-insect,
+#playing-game{
+  background-color: rgb(34, 133, 194);
+  height: 100vh;
+  padding:0 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro-section h1,
+#select-insect h2{
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+#intro-section .btn{
+  padding: 1rem 2rem;  
+  background-color: #fff;
+  text-decoration: none;
+  color: rgb(34, 133, 194);
+  transition: transform 0.4s ease;
+}
+#intro-section .btn:active{
+  transform: scale(0.95);
+}
+
+.insects-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.insect{
+  height: 100px;
+  width: 100px;
+  border: 1px solid #fff;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.insect:hover{
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+.insect:hover h3{
+  color: rgb(34, 133, 194);
+}
+
+.insect:nth-child(1){
+  background-image: url('images/fly.png');
+  background-size: 80%;
+  background-position: 50% 100%;
+}
+
+.insect:nth-child(2){
+  background-image: url('images/mosquito.png');
+  background-size: 80%;
+  background-position: 50% 100%;
+}
+
+
+.insect:nth-child(3){
+  background-image: url('images/spider.png');
+  background-size: 90%;
+  background-position: 50% 100%;
+}
+
+.insect:nth-child(4){
+  background-image: url('images/roach.png');
+  background-size: 90%;
+  background-position: 100% 200%;
+}
+
+
+
+.insect h3{
+  font-size: 0.6rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.5rem;
+}
+
+#playing-game{
+  position: relative;
+}
+
+.timer{
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #fff;
+}
+
+.score{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+}
+
+.game-field{
+  position: relative;
+  height: calc(100vh - 3.5rem);
+  width: 100%;
+  margin-top: auto;
+}
+
+.insect-box{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.insect-box.is-clicked{
+  transform: scale(0) !important;
+  transition: transform 0.3s ease;
+}
+
+.message{
+  text-align: center;
+  padding: 0%;
+  line-height: 2;
+  width: 100%;
+  height: 0%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.message.is-visible{
+  animation: appear 1s ease forwards;
+}
+
+.message::after{
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+  to{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    padding: 5%;
+  }
+}

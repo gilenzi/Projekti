@@ -20,12 +20,10 @@ const dataStructure = {
         'max' : 57
     },
     'symbols' : {
-        // 'min' : 33,
-        // 'max' : 126,
         'arr' : [33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,58,59,60,61,62,63,64,91,92,93,94,95,123,124,125,126]
     }
 };
-    // if(i == 47 && i < 58)
+
 let multipleArr = [];
 
 // EVENT LISTENERS
@@ -54,6 +52,7 @@ btnGenerate.addEventListener('click',() => {
 function copyText(e){
     e.preventDefault();
     /* Get the text field */
+    if(generatorInput.value.trim() === '') return;
     const copyText = generatorInput;
 
     /* Select the text field */
@@ -62,7 +61,7 @@ function copyText(e){
 
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.value);
-    generatorInput.value = '';
+    alert('Password coppied to clip board.');
 }
 
 function getMultipleRandomChars(arrOfRange){

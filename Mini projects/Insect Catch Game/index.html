@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" defer></script>
+    <title>Insect Catch Game</title>
+</head>
+<body>
+    <section id="intro-section">
+        <h1>Catch The Insect</h1>
+        <a href="#select-insect" class="btn">Play Game</a>
+    </section>
+
+    <section id="select-insect">
+        <h2>What is your "favorite" insect?</h2>
+        <div class="insects-container">
+            <a href="#playing-game" data-insect-type="fly" class="insect">
+                <h3>Fly</h3>
+            </a>
+            <a href="#playing-game" data-insect-type="mosquito" class="insect">
+                <h3>Mosquito</h3>
+            </a>
+            <a href="#playing-game" data-insect-type="spider" class="insect">
+                <h3>Spider</h3>
+            </a>
+            <a href="#playing-game" data-insect-type="roach" class="insect">
+                <h3>Roach</h3>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="playing-game">
+        <p class="timer">Time: <span class="minutes">00</span>:<span class="seconds">00</span></p>
+        <p class="score">Score: <span>0</span></p>
+        <div class="game-field"></div>
+        <div class="message">Are you annoyed yet, by playing impossible game to win? 😁😀😁</div>
+    </section>
+</body>
+</html>

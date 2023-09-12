@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator Better Way</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="h-full w-full fixed top-0 background"></div>
+    <div class="w-full px-8 mt-8 flex shadow-2xl">
+        <div class="w-1/2 p-12 side-column">
+            <h1 class="text-white text-8xl mt-16 font-bold">Hello World.</h1>
+            <p class="text-white my-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, numquam.</p>
+            <p class="text-white my-8 font-bold">Register with social media</p>
+            <div class="flex gap-8">
+                  <div class="flex items-center gap-4 text-sm bg-blue-900 text-white px-8 py-2 rounded-full">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <span>Facebook</span>
+                  </div>
+                  <div class="flex items-center gap-4 text-sm bg-sky-400 text-white px-8 py-2 rounded-full">
+                    <i class="fa-brands fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 p-10 bg-white">
+            <h2 class="text-4xl font-bold">Register</h2>
+            <p class="my-8">Already have an account? <a class="text-blue-700" href="#">Login here</a>  instead.</p>
+
+            <form id="registration-form">
+                <div class="form-group flex flex-col my-4">
+                    <label for="first-name">First name</label>
+                    <div class="flex items-center">
+                        <input 
+                        required
+                        minlength="2"
+                        customMaxlength="5"
+                        type="text" 
+                        id="first-name" 
+                        class="w-full border-b-2 border-black outline-none py-2">
+
+                        <span class="error-icon -ml-6 text-red-700 hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </span>
+                        <span class="success-icon -ml-6 text-green-700 hidden">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="error text-red-700 py-2"></div>
+                </div>
+                <div class="form-group flex flex-col my-4">
+                    <label for="email">Email Address</label>
+                    <div class="flex items-center">
+                        <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" id="email" class="w-full border-b-2 border-black outline-none py-2">
+                        <span class="error-icon -ml-6 text-red-700 hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </span>
+                        <span class="success-icon -ml-6 text-green-700 hidden">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="error text-red-700 py-2"></div>
+                </div>
+                <div class="form-group flex flex-col my-4">
+                    <label for="password">Password</label>
+                    <div class="flex items-center">
+                        <input required minlength="8" type="password" id="password" class="w-full border-b-2 border-black outline-none py-2">
+                        <span class="error-icon -ml-6 text-red-700 hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </span>
+                        <span class="success-icon -ml-6 text-green-700 hidden">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="error text-red-700 py-2"></div>
+                </div>
+                <div class="form-group flex flex-col my-4">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="flex items-center">
+                        <input  match="password" required minlength="8" type="password" id="confirm-password" class="w-full border-b-2 border-black outline-none py-2">
+                        <span class="error-icon -ml-6 text-red-700 hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </span>
+                        <span class="success-icon -ml-6 text-green-700 hidden">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="error text-red-700 py-2"></div>
+                </div>
+                <button type="submit" class="px-8 py-2 mt-4 bg-green-400 w-full rounded-full text-white shadow-lg">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-verify{
+    max-width: 40rem;
+    padding: 2rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.account-verify__title,
+.account-verify__text{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.account-verify__pin-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+
+}
+
+.account-verify__number-field{
+    text-align: center;
+    font-size: 4rem;
+    height: 120px;
+    width: 90px;
+    padding: 1rem;
+    /* border: 2px solid #eee; */
+    transition: all .3s ease-in-out;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+
+
+.account-verify__number-field::-webkit-outer-spin-button,
+.account-verify__number-field::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.account-verify__number-field:valid{
+    border-color: #3498db;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+.account-verify__number-field:focus{
+    border: 2px solid cadetblue;
+}
+
+.account-verify__disclaimer-container{
+    margin: 0 auto;
+    padding: .6rem;
+    background-color: lightslategray;
+    color: #fff;
+}
+
+.account-verify__disclaimer-text{
+    text-align: center;
+}

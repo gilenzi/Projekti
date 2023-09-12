@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.background{
+    z-index: -1;
+    background-size: cover;
+    background-image: linear-gradient(rgba(121,30,77,0.8),rgba(121,30,77,0.8)),url('https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    filter: blur(6px);
+}
+
+.side-column{
+    background-size: cover;
+    background-position: 50%;
+    background-image: linear-gradient(rgba(39,5,22,0.8),rgba(39,5,22,0.8)),url('https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}

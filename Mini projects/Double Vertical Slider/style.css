@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.slider{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden !important;
+}
+.elementor-video{
+    /* width: 100%; */
+    height: 100%;
+}
+
+.slider__left-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+}
+
+.slider__text-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+}
+
+.slider__image-section{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+}
+.slider__image{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .5s ease-in-out;
+}   
+
+.slider__image--1{
+    background-image: url('images/photo-1.jpg');
+}
+.slider__image--2{
+    background-image: url('images/photo-2.jpg');
+}
+.slider__image--3{
+    background-image: url('images/photo-3.jpg');
+}
+.slider__image--4{
+    background-image: url('images/photo-4.jpg');
+}
+
+.slider__title{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.slider__text{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* ARROWS */
+.arrows-container{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    display: flex;
+    transform: translate(-50%,-50%);
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    color: rgb(143, 143, 143);
+    background-color: rgb(252, 247, 247);
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.arrow:hover{
+    color: #000;
+}
+
+.arrow--up{
+    transform: translateY(-50%);
+    border-radius: 0 5px 5px 0;
+}
+.arrow--down{
+    transform: translateY(50%);
+    border-radius: 5px 0 0 5px;
+}
+
+.slide-up{
+    transform: translateY(-100%);
+}
+.slide-down{
+    transform: translateY(100%);
+}
+
+@media(max-width: 1024px){
+    .arrows-container{
+        top: 34%;
+        left: 40%;
+    }
+
+    .slider__left-side{
+        width: 40%;
+    }
+    .slider__image-section{
+        left: 40%;
+    }
+}

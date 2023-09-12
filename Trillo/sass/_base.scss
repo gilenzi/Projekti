@@ -1,0 +1,42 @@
+// COLORS
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$primary: #eb2f64;
+$primary-light: #ff3366;
+$primary-dark: #ba265d;
+
+$light-1: #faf9f9;
+$light-2: #f4f2f2;
+$light-3: #f0eeee;
+$light-4: #ccc;
+
+$dark-1: #333;
+$dark-2: #777;
+$dark-3: #999;
+
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+$bp-largest: 75em; //1200px
+$bp-medium: 56.25em; //900px
+$bp-medium-small: 43.75em; //700px
+$bp-small: 37.5em; //600px
+$bp-very-small: 27.5em; //440px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //10px
+  // @media only screen and (max-width: $bp-largest) {
+  //   font-size: 62.5%;
+  // }
+}
+
+body {
+  background-color: $primary;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}

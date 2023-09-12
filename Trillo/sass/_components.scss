@@ -1,0 +1,586 @@
+///////////////////////////////////////////////
+//LOGO
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+///////////////////////////////////////////////
+//SEARCH
+
+.search {
+  position: relative;
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and(max-width:$bp-very-small) {
+    margin-left: -1rem;
+  }
+  &__input {
+    outline: none;
+    border: none;
+    color: inherit;
+    border-radius: 4rem;
+    background-color: $light-2;
+    padding: 1rem 2rem;
+    width: 90%;
+    transition: all 0.4s ease;
+    margin-right: -3.5rem;
+    &:focus {
+      width: 100%;
+      background-color: $light-3;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    &::placeholder {
+      font-size: 1.6rem;
+      color: $light-4;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: $light-3;
+  }
+
+  &__button {
+    border: none;
+    background-color: $light-2;
+
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $dark-3;
+  }
+}
+///////////////////////////////////////////////
+//PROPOSITIONS
+
+.search__input:focus ~ .proposition {
+  transform: scaleY(1);
+}
+
+.proposition {
+  position: absolute;
+  top: 100%;
+  left: 2%;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 0 2rem 0;
+  transform: scaleY(0);
+  transform-origin: 50% 0%;
+  transition: all 0.4s ease 0.2s;
+  border-radius: 0 0 3rem 3rem;
+  z-index: 10000;
+  &__box {
+    display: flex;
+    padding: 0.4rem;
+    &:hover {
+      background-color: $light-2;
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $dark-3;
+    margin: 0.2rem 0.5rem 0 0;
+  }
+  &__text {
+    font-size: 1.6rem;
+  }
+}
+
+///////////////////////////////////////////////
+//USER NAVIGATION
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  & > *:hover {
+    background-color: $light-4;
+  }
+
+  &__icon-box {
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: $dark-2;
+  }
+
+  &__notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1.1rem;
+    top: 1.5rem;
+
+    background-color: $primary;
+    padding: 0.1rem;
+    font-size: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  &__user-photo {
+    height: 4rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+  &__user-name {
+    display: block;
+    color: $dark-1;
+    font-size: 1.6rem;
+  }
+
+  &__icon-box:hover &__message {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__message {
+    position: absolute;
+    top: -2rem;
+    right: -6rem;
+    font-size: 1.4rem;
+    color: $dark-1;
+    background-color: #fff;
+    padding: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1231;
+    transition: all 0.3s ease;
+  }
+}
+
+///////////////////////////////////////////////
+//SIDE NAVIGATION
+.side-nav {
+  list-style: none;
+  margin-top: 3.5rem;
+  @media only screen and(max-width:$bp-medium) {
+    display: flex;
+
+    margin-top: 0;
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+    @media only screen and(max-width:$bp-medium) {
+      margin: 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--active {
+      background-color: $primary;
+    }
+  }
+
+  &__item:active::before {
+    background-color: $primary-light;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    width: 0.3rem;
+    background-color: $primary;
+    height: 100%;
+    transform: scaleY(0);
+    transition: transform 0.3s ease, width 0.4s cubic-bezier(1, 0, 0, 1) 0.3s;
+  }
+  &__item:hover::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $light-1;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    z-index: 11;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1.5rem 0.2rem;
+    }
+  }
+  &__icon {
+    // display: block;
+    margin-right: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+///////////////////////////////////////////////
+//LEGAL TEXT
+
+.legal {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: $light-4;
+  @media only screen and(max-width:$bp-medium) {
+    display: none;
+  }
+}
+
+///////////////////////////////////////////////
+//GALLERY
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 1 1 33.3333%;
+    @media only screen and(max-width:$bp-small) {
+      flex: 1 1 100%;
+
+      &:not(:first-child) {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+  }
+}
+
+///////////////////////////////////////////////
+//OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+
+  // padding: 2rem;
+  &__heading {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: $dark-1;
+    margin: 0 3rem;
+    @media only screen and(max-width:$bp-small) {
+      margin: 1rem;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: $primary;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__place {
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    color: $primary;
+    background-color: #fff;
+    border-bottom: 0.2rem solid $primary;
+  }
+
+  &__rating {
+    background-color: $primary;
+    height: 100%;
+    margin-left: 3rem;
+    padding: 0.9rem;
+    @media only screen and(max-width:$bp-small) {
+      margin-left: 1rem;
+    }
+    @media only screen and(max-width:$bp-very-small) {
+      padding: 0;
+    }
+  }
+
+  &__rating-average,
+  &__rating-count {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+  }
+  &__rating-average {
+    font-size: 1.8rem;
+  }
+}
+
+///////////////////////////////////////////////
+//DESCRIPTION
+
+.description {
+  padding: 2rem;
+
+  &__text {
+    font-size: 1.6rem;
+    color: $dark-1;
+    padding: 1rem 0;
+  }
+
+  &__about {
+    border-top: 0.2rem solid $light-3;
+    margin: 1rem 0;
+    display: flex;
+    @media only screen and(max-width:$bp-very-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__list {
+    padding-left: 0.4rem;
+    flex: 0 0 50%;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 1rem;
+    font-size: 1.6rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 0.7rem;
+      background-color: $primary;
+      //Newer browsers
+      @supports (-webkit-mask-image: url()) {
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+      }
+    }
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and(max-width:$bp-small) {
+      flex-wrap: wrap;
+    }
+    border-top: 0.2rem solid $light-3;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  &__users {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  &__user-photo {
+    border-radius: 50%;
+    width: 6rem;
+    // height: ;
+  }
+  &__user-photo:not(:first-child) {
+    margin-left: -1rem;
+    // border-radius: 10px;
+    border-left: 0.2rem solid #fff;
+  }
+}
+
+///////////////////////////////////////////////
+//Review CARD
+
+.review-card {
+  position: relative;
+  background-color: #fff;
+
+  padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium-small) {
+    &:first-child {
+      margin: 1.4rem 0;
+    }
+  }
+
+  &:first-child {
+    margin-bottom: 1.4rem;
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -3.8rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: $light-4;
+    z-index: 1;
+  }
+
+  &__text {
+    z-index: 1223;
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.7rem;
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__photo {
+    border-radius: 50%;
+    width: 6rem;
+    margin-right: 1rem;
+  }
+
+  &__grade {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    color: $primary;
+    font-weight: 500;
+  }
+  &__about {
+    display: flex;
+    flex-direction: column;
+  }
+  &__user-name {
+    font-size: 1.6rem;
+    color: $dark-1;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    color: $dark-3;
+  }
+
+  &__button {
+    display: inline-block;
+    color: $primary;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 0.2rem solid $primary;
+    margin: 2rem 0;
+    text-align: center;
+
+    & span {
+      margin-left: 0.3rem;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      span {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////
+//ACTION SECTION
+
+.action {
+  padding: 2rem;
+
+  text-align: center;
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $dark-3;
+  }
+  &__button {
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4rem;
+    padding: 1rem 4rem;
+    margin: 2rem 0;
+    background: linear-gradient(to left, $primary, $primary-dark);
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s ease;
+    & span {
+      display: block;
+      transition: all 0.4s ease;
+      &:nth-child(1) {
+        transform: translateY(-2rem);
+        opacity: 0;
+        margin-bottom: -1rem;
+      }
+    }
+
+    &:hover {
+      span:nth-child(1) {
+        opacity: 1;
+        margin-bottom: 0;
+        transform: translateY(0.1rem);
+      }
+
+      span:nth-child(2) {
+        transform: translateY(1rem);
+        opacity: 0;
+        margin-bottom: -1rem;
+      }
+      background: linear-gradient(to right, $primary, $primary-dark);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(19, 18, 18);
+}
+
+.btn{
+    margin-bottom: 2rem;
+    padding: 0.6rem 1rem;
+    background-color: rgb(2, 138, 31);
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    transition: all .5s ease;
+}
+
+.box-image.big{
+    width: 600px;
+    height: 600px;
+    background-image: none;
+}
+
+.box-image.big .box-image__box{
+    transform: rotateZ(360deg);
+}
+
+.box-image__box{
+    position: relative;
+    min-width: 125px;
+    height: 125px;
+    background-color:orangered;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/555c6624e4b0a502cd630517/1527672689580-YOF90WPYWJ65OCNLM5OE/ButtDanceSmall.gif?format=1500w');
+    background-position: 30% 60%;
+    background-repeat: no-repeat;
+    transition: all .4s ease;
+    border: 1px solid #fff;
+}
+
+.box-image__box::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    background-color: orangered;
+    transform: skewY(45deg);
+    height: 100%;
+    width: 10px;
+}
+.box-image__box::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -6px;
+    background-color: orangered;
+    transform: skewX(45deg);
+    width: 100%;
+    height: 10px;
+    border-radius: 0 0 3px 0;
+}

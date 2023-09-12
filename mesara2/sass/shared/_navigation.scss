@@ -1,0 +1,103 @@
+@mixin navigation {
+    /* NAVIGATION */
+nav {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding-left: 3px;
+  }
+  
+  nav ul li {
+    text-transform: uppercase;
+    margin: 40px 0;
+    transform: translateX(-104%);
+    transition: transform 0.4s ease-in;
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+    transform: translateX(-150%);
+  }
+  
+  nav ul li + li + li {
+    /* margin-left: 30px; */
+    transform: translateX(-200%);
+  }
+  
+  nav ul li i {
+    margin-right: 10px;
+    color: #333;
+    font-size: 1.5em;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .container {
+    position: relative;
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .container.show-nav {
+    transform: rotate(-20deg);
+  }
+  
+  .container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  
+  .circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 100;
+  }
+  
+  .circle {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+  }
+  .circle-rotate {
+    transform: rotate(-90deg);
+  }
+  
+  .circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: #fff;
+  }
+  
+  .circle button:focus {
+    outline: none;
+  }
+  
+  .circle button#open {
+    left: 60%;
+  }
+  .circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+  }
+}

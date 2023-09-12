@@ -1,0 +1,1 @@
+{"mappings":"AAAA,iCAAiC;AAEjC,2BAA2B;AAC3B,OAAO,CAAC,GAAG,CAAC,EAAE,CAAC","sources":["src/app.js"],"sourcesContent":["// import { Tawk } from './Tawk';\r\n\r\n// const tawk = new Tawk();\r\nconsole.log(12)"],"names":[],"version":3,"file":"index.816e7b21.js.map","sourceRoot":"/__parcel_source_root/"}

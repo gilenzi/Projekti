@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    padding: 0 3%;
+}
+
+.feedback-card{
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: #fff;
+    max-width: 350px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.feedback-card.is-done .feedback-card__survay{
+    animation: fade-out 0.4s ease forwards;
+    /* display: none; */
+}
+.feedback-card.is-done .feedback-card__feedback-result{
+    animation: fade-in 0.5s ease forwards;
+}
+
+.feedback-card__title{
+    text-align: center;
+}
+
+.feedback-card__emoji-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.feedback-card__emoji{
+    width: 25%;
+    height: 75px;
+    min-width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    transition: all 0.4s ease;
+}
+.feedback-card__emoji:hover,
+.feedback-card__emoji.is-active{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);;
+}
+
+.feedback-card__emoji:not(:last-child){
+    margin-right: 0.5rem;
+}
+
+.feedback-card__emoji--unhappy{
+    background-image: url('./images/sad-svgrepo-com.svg');
+}
+.feedback-card__emoji--satisfied{
+    background-image: url('./images/happy-svgrepo-com\ \(2\).svg');
+}
+.feedback-card__emoji--happy{
+    background-image: url('./images/happy-svgrepo-com\ \(1\).svg');
+}
+
+.feedback-card__btn{
+    background-color: #333;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    margin-left: 35%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+.feedback-card__btn:active{
+    transform: scale(0.98);
+}
+
+.feedback-card__feedback-result{
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fa-heart{
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.feedback-card__text{
+    text-align: center;
+    padding: 0.3rem 0;
+}
+
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}

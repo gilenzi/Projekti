@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.live-search{
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.live-search__header{
+    padding: 1rem;
+    background-color: rgb(29, 77, 116);
+    border-radius: 10px 10px 0 0;
+}
+.live-search__title,
+.live-search__text{
+    color: #fff;
+    padding: .3rem 0;
+}
+
+.live-search__search-form{
+    padding: .8rem 0;
+}
+
+.live-search__search-field{
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    color: #333;
+    padding: .5rem;
+    width: 100%;
+}
+.live-search__search-field::placeholder{
+    color: rgb(8, 62, 163);
+    font-weight: 600;
+}
+
+.live-search__users{
+    overflow-y: scroll;
+    max-height: 500px;
+    min-height: 500px;
+}
+
+.live-search__user{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-b; */
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.live-search__image{
+    border-radius: 50%;
+    margin: .5rem;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.live-search__user-name{
+    padding: .3rem;
+    padding-left: 0;
+}
+
+/* width */
+.live-search__users::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+.live-search__users::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+.live-search__users::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+.live-search__users::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
