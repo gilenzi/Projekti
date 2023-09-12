@@ -9,5 +9,8 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css "
   },
   "author": "Ognjen Popovic",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
