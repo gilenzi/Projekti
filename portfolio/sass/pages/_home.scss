@@ -17,7 +17,7 @@
 .section-skills {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
 }
 
 #blob {
@@ -91,4 +91,24 @@
   #profile-img {
     max-width: 30rem;
   }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#section-skills {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#section-skills.in-view {
+  animation: slideIn 2s ease forwards;
 }

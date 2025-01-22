@@ -1,332 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shorcut icon" type="image/png" href="img/favicon.png" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shorcut icon" type="image/png" href="img/favicon.png">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-
-    <script src="js/particles.js" defer></script>
     <script src="js/app.js" defer></script>
+    <script src="js/fade-in.js" defer> </script>
+    <script src="js/particles.js" ></script>
 
     <title>Ognjen Popović | Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
 
-        <div class="navigation__background">&nbsp;</div>
+      <div class="navigation__background">&nbsp;</div>
 
-        <nav class="navigation__nav">
-            <div id="particles-js">
-            </div>
-            <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="#section-projects">Projects</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#section-skills">Skills</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#section-about-me">About me</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#section-contact">contact</a></li>
-            </ul>
-        </nav>
+      <nav class="navigation__nav">
+        <div id="particles-js"></div>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#section-projects">Projects</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#section-skills">Skills</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#section-about-me">About me</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#section-contact">contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <section class="section-main" id="section-main">
-    <svg id="logo" width="495" height="634" viewBox="0 0 495 634" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M44.4977 7.20001H86.4017V21.6H60.3377V49.68H80.7857V64.08H60.3377V108H44.4977V7.20001Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M93.9977 7.20001H117.47C125.63 7.20001 131.582 9.12001 135.326 12.96C139.07 16.704 140.942 22.512 140.942 30.384V36.576C140.942 47.04 137.486 53.664 130.574 56.448V56.736C134.414 57.888 137.102 60.24 138.638 63.792C140.27 67.344 141.086 72.096 141.086 78.048V95.76C141.086 98.64 141.182 100.992 141.374 102.816C141.566 104.544 142.046 106.272 142.814 108H126.686C126.11 106.368 125.726 104.832 125.534 103.392C125.342 101.952 125.246 99.36 125.246 95.616V77.184C125.246 72.576 124.478 69.36 122.942 67.536C121.502 65.712 118.958 64.8 115.31 64.8H109.838V108H93.9977V7.20001ZM115.598 50.4C118.766 50.4 121.118 49.584 122.654 47.952C124.286 46.32 125.102 43.584 125.102 39.744V31.968C125.102 28.32 124.43 25.68 123.086 24.048C121.838 22.416 119.822 21.6 117.038 21.6H109.838V50.4H115.598Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M174.972 109.44C167.196 109.44 161.244 107.232 157.116 102.816C152.988 98.4 150.924 92.16 150.924 84.096V31.104C150.924 23.04 152.988 16.8 157.116 12.384C161.244 7.96801 167.196 5.76001 174.972 5.76001C182.748 5.76001 188.7 7.96801 192.828 12.384C196.956 16.8 199.02 23.04 199.02 31.104V84.096C199.02 92.16 196.956 98.4 192.828 102.816C188.7 107.232 182.748 109.44 174.972 109.44ZM174.972 95.04C180.444 95.04 183.18 91.728 183.18 85.104V30.096C183.18 23.472 180.444 20.16 174.972 20.16C169.5 20.16 166.764 23.472 166.764 30.096V85.104C166.764 91.728 169.5 95.04 174.972 95.04Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M209.732 7.20001H229.604L245.012 67.536H245.3V7.20001H259.412V108H243.14L224.132 34.416H223.844V108H209.732V7.20001Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M283.569 21.6H267.009V7.20001H315.969V21.6H299.409V108H283.569V21.6Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M323.638 7.20001H366.838V21.6H339.478V48.24H361.222V62.64H339.478V93.6H366.838V108H323.638V7.20001Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M375.951 7.20001H395.823L411.231 67.536H411.519V7.20001H425.631V108H409.359L390.351 34.416H390.063V108H375.951V7.20001Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M437.404 7.20001H461.596C469.468 7.20001 475.372 9.31201 479.308 13.536C483.244 17.76 485.212 23.952 485.212 32.112V83.088C485.212 91.248 483.244 97.44 479.308 101.664C475.372 105.888 469.468 108 461.596 108H437.404V7.20001ZM461.308 93.6C463.9 93.6 465.868 92.832 467.212 91.296C468.652 89.76 469.372 87.264 469.372 83.808V31.392C469.372 27.936 468.652 25.44 467.212 23.904C465.868 22.368 463.9 21.6 461.308 21.6H453.244V93.6H461.308Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M5.26337 180.2H29.4554C37.3274 180.2 43.2314 182.312 47.1674 186.536C51.1034 190.76 53.0714 196.952 53.0714 205.112V256.088C53.0714 264.248 51.1034 270.44 47.1674 274.664C43.2314 278.888 37.3274 281 29.4554 281H5.26337V180.2ZM29.1674 266.6C31.7594 266.6 33.7274 265.832 35.0714 264.296C36.5114 262.76 37.2314 260.264 37.2314 256.808V204.392C37.2314 200.936 36.5114 198.44 35.0714 196.904C33.7274 195.368 31.7594 194.6 29.1674 194.6H21.1034V266.6H29.1674Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M63.7634 180.2H106.963V194.6H79.6034V221.24H101.347V235.64H79.6034V266.6H106.963V281H63.7634V180.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M111.9 180.2H127.884L138.252 258.392H138.54L148.908 180.2H163.452L148.188 281H127.164L111.9 180.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M171.06 180.2H214.26V194.6H186.9V221.24H208.644V235.64H186.9V266.6H214.26V281H171.06V180.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M223.373 180.2H239.213V266.6H265.277V281H223.373V180.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M295.206 282.44C287.43 282.44 281.478 280.232 277.35 275.816C273.222 271.4 271.158 265.16 271.158 257.096V204.104C271.158 196.04 273.222 189.8 277.35 185.384C281.478 180.968 287.43 178.76 295.206 178.76C302.982 178.76 308.934 180.968 313.062 185.384C317.19 189.8 319.254 196.04 319.254 204.104V257.096C319.254 265.16 317.19 271.4 313.062 275.816C308.934 280.232 302.982 282.44 295.206 282.44ZM295.206 268.04C300.678 268.04 303.414 264.728 303.414 258.104V203.096C303.414 196.472 300.678 193.16 295.206 193.16C289.734 193.16 286.998 196.472 286.998 203.096V258.104C286.998 264.728 289.734 268.04 295.206 268.04Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M329.966 180.2H353.294C361.166 180.2 367.071 182.312 371.007 186.536C374.943 190.76 376.911 196.952 376.911 205.112V215.048C376.911 223.208 374.943 229.4 371.007 233.624C367.071 237.848 361.166 239.96 353.294 239.96H345.806V281H329.966V180.2ZM353.294 225.56C355.886 225.56 357.807 224.84 359.055 223.4C360.399 221.96 361.07 219.512 361.07 216.056V204.104C361.07 200.648 360.399 198.2 359.055 196.76C357.807 195.32 355.886 194.6 353.294 194.6H345.806V225.56H353.294Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M385.513 180.2H428.713V194.6H401.353V221.24H423.097V235.64H401.353V266.6H428.713V281H385.513V180.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M437.826 180.2H461.298C469.458 180.2 475.41 182.12 479.154 185.96C482.898 189.704 484.77 195.512 484.77 203.384V209.576C484.77 220.04 481.314 226.664 474.402 229.448V229.736C478.242 230.888 480.93 233.24 482.466 236.792C484.098 240.344 484.914 245.096 484.914 251.048V268.76C484.914 271.64 485.01 273.992 485.202 275.816C485.394 277.544 485.874 279.272 486.642 281H470.514C469.938 279.368 469.554 277.832 469.362 276.392C469.17 274.952 469.074 272.36 469.074 268.616V250.184C469.074 245.576 468.306 242.36 466.77 240.536C465.33 238.712 462.786 237.8 459.138 237.8H453.666V281H437.826V180.2ZM459.426 223.4C462.594 223.4 464.946 222.584 466.482 220.952C468.114 219.32 468.93 216.584 468.93 212.744V204.968C468.93 201.32 468.258 198.68 466.914 197.048C465.666 195.416 463.65 194.6 460.866 194.6H453.666V223.4H459.426Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M191.566 455.44C183.79 455.44 177.838 453.232 173.71 448.816C169.582 444.4 167.518 438.16 167.518 430.096V377.104C167.518 369.04 169.582 362.8 173.71 358.384C177.838 353.968 183.79 351.76 191.566 351.76C199.342 351.76 205.294 353.968 209.422 358.384C213.55 362.8 215.614 369.04 215.614 377.104V430.096C215.614 438.16 213.55 444.4 209.422 448.816C205.294 453.232 199.342 455.44 191.566 455.44ZM191.566 441.04C197.038 441.04 199.774 437.728 199.774 431.104V376.096C199.774 369.472 197.038 366.16 191.566 366.16C186.094 366.16 183.358 369.472 183.358 376.096V431.104C183.358 437.728 186.094 441.04 191.566 441.04Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M248.79 455.44C241.11 455.44 235.254 453.28 231.222 448.96C227.19 444.544 225.174 438.256 225.174 430.096V377.104C225.174 368.944 227.19 362.704 231.222 358.384C235.254 353.968 241.11 351.76 248.79 351.76C256.47 351.76 262.326 353.968 266.358 358.384C270.39 362.704 272.406 368.944 272.406 377.104V385.744H257.43V376.096C257.43 369.472 254.694 366.16 249.222 366.16C243.75 366.16 241.014 369.472 241.014 376.096V431.248C241.014 437.776 243.75 441.04 249.222 441.04C254.694 441.04 257.43 437.776 257.43 431.248V411.52H249.51V397.12H272.406V430.096C272.406 438.256 270.39 444.544 266.358 448.96C262.326 453.28 256.47 455.44 248.79 455.44Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M282.576 353.2H302.448L317.856 413.536H318.144V353.2H332.256V454H315.984L296.976 380.416H296.688V454H282.576V353.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M347.773 454.576C344.893 454.576 342.445 454.384 340.429 454V439.6C341.965 439.984 343.693 440.176 345.613 440.176C348.781 440.176 351.133 439.408 352.669 437.872C354.205 436.24 354.973 433.792 354.973 430.528V353.2H370.813V430.096C370.813 438.352 368.893 444.496 365.053 448.528C361.309 452.56 355.549 454.576 347.773 454.576Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M382.138 353.2H425.338V367.6H397.978V394.24H419.722V408.64H397.978V439.6H425.338V454H382.138V353.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M434.451 353.2H454.323L469.731 413.536H470.019V353.2H484.131V454H467.859L448.851 380.416H448.563V454H434.451V353.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M131.966 526.2H155.294C163.166 526.2 169.07 528.312 173.006 532.536C176.942 536.76 178.91 542.952 178.91 551.112V561.048C178.91 569.208 176.942 575.4 173.006 579.624C169.07 583.848 163.166 585.96 155.294 585.96H147.806V627H131.966V526.2ZM155.294 571.56C157.886 571.56 159.806 570.84 161.054 569.4C162.398 567.96 163.07 565.512 163.07 562.056V550.104C163.07 546.648 162.398 544.2 161.054 542.76C159.806 541.32 157.886 540.6 155.294 540.6H147.806V571.56H155.294Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M210.409 628.44C202.633 628.44 196.681 626.232 192.553 621.816C188.425 617.4 186.361 611.16 186.361 603.096V550.104C186.361 542.04 188.425 535.8 192.553 531.384C196.681 526.968 202.633 524.76 210.409 524.76C218.185 524.76 224.137 526.968 228.265 531.384C232.393 535.8 234.457 542.04 234.457 550.104V603.096C234.457 611.16 232.393 617.4 228.265 621.816C224.137 626.232 218.185 628.44 210.409 628.44ZM210.409 614.04C215.881 614.04 218.617 610.728 218.617 604.104V549.096C218.617 542.472 215.881 539.16 210.409 539.16C204.937 539.16 202.201 542.472 202.201 549.096V604.104C202.201 610.728 204.937 614.04 210.409 614.04Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M245.17 526.2H268.498C276.37 526.2 282.274 528.312 286.21 532.536C290.146 536.76 292.114 542.952 292.114 551.112V561.048C292.114 569.208 290.146 575.4 286.21 579.624C282.274 583.848 276.37 585.96 268.498 585.96H261.01V627H245.17V526.2ZM268.498 571.56C271.09 571.56 273.01 570.84 274.258 569.4C275.602 567.96 276.274 565.512 276.274 562.056V550.104C276.274 546.648 275.602 544.2 274.258 542.76C273.01 541.32 271.09 540.6 268.498 540.6H261.01V571.56H268.498Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M323.612 628.44C315.836 628.44 309.884 626.232 305.756 621.816C301.628 617.4 299.565 611.16 299.565 603.096V550.104C299.565 542.04 301.628 535.8 305.756 531.384C309.884 526.968 315.836 524.76 323.612 524.76C331.388 524.76 337.341 526.968 341.469 531.384C345.597 535.8 347.66 542.04 347.66 550.104V603.096C347.66 611.16 345.597 617.4 341.469 621.816C337.341 626.232 331.388 628.44 323.612 628.44ZM323.612 614.04C329.084 614.04 331.82 610.728 331.82 604.104V549.096C331.82 542.472 329.084 539.16 323.612 539.16C318.14 539.16 315.404 542.472 315.404 549.096V604.104C315.404 610.728 318.14 614.04 323.612 614.04Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M353.915 526.2H369.899L380.268 604.392H380.555L390.924 526.2H405.468L390.203 627H369.18L353.915 526.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M413.076 526.2H428.916V627H413.076V526.2Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        <path d="M463.099 628.44C455.515 628.44 449.707 626.28 445.675 621.96C441.739 617.64 439.771 611.544 439.771 603.672V549.528C439.771 541.656 441.739 535.56 445.675 531.24C449.707 526.92 455.515 524.76 463.099 524.76C470.683 524.76 476.443 526.92 480.379 531.24C484.411 535.56 486.427 541.656 486.427 549.528V560.184H471.451V548.52C471.451 542.28 468.811 539.16 463.531 539.16C458.251 539.16 455.611 542.28 455.611 548.52V604.824C455.611 610.968 458.251 614.04 463.531 614.04C468.811 614.04 471.451 610.968 471.451 604.824V589.416H486.427V603.672C486.427 611.544 484.411 617.64 480.379 621.96C476.443 626.28 470.683 628.44 463.099 628.44Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-        </svg>
-        <div class="profile-container">
-            <img id="profile-img" src="img/profile-pic.png" alt="Profile picture">
-        </div>
-    </section>    
+      <svg
+        id="logo"
+        width="495"
+        height="634"
+        viewBox="0 0 495 634"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M44.4977 7.20001H86.4017V21.6H60.3377V49.68H80.7857V64.08H60.3377V108H44.4977V7.20001Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M93.9977 7.20001H117.47C125.63 7.20001 131.582 9.12001 135.326 12.96C139.07 16.704 140.942 22.512 140.942 30.384V36.576C140.942 47.04 137.486 53.664 130.574 56.448V56.736C134.414 57.888 137.102 60.24 138.638 63.792C140.27 67.344 141.086 72.096 141.086 78.048V95.76C141.086 98.64 141.182 100.992 141.374 102.816C141.566 104.544 142.046 106.272 142.814 108H126.686C126.11 106.368 125.726 104.832 125.534 103.392C125.342 101.952 125.246 99.36 125.246 95.616V77.184C125.246 72.576 124.478 69.36 122.942 67.536C121.502 65.712 118.958 64.8 115.31 64.8H109.838V108H93.9977V7.20001ZM115.598 50.4C118.766 50.4 121.118 49.584 122.654 47.952C124.286 46.32 125.102 43.584 125.102 39.744V31.968C125.102 28.32 124.43 25.68 123.086 24.048C121.838 22.416 119.822 21.6 117.038 21.6H109.838V50.4H115.598Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M174.972 109.44C167.196 109.44 161.244 107.232 157.116 102.816C152.988 98.4 150.924 92.16 150.924 84.096V31.104C150.924 23.04 152.988 16.8 157.116 12.384C161.244 7.96801 167.196 5.76001 174.972 5.76001C182.748 5.76001 188.7 7.96801 192.828 12.384C196.956 16.8 199.02 23.04 199.02 31.104V84.096C199.02 92.16 196.956 98.4 192.828 102.816C188.7 107.232 182.748 109.44 174.972 109.44ZM174.972 95.04C180.444 95.04 183.18 91.728 183.18 85.104V30.096C183.18 23.472 180.444 20.16 174.972 20.16C169.5 20.16 166.764 23.472 166.764 30.096V85.104C166.764 91.728 169.5 95.04 174.972 95.04Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M209.732 7.20001H229.604L245.012 67.536H245.3V7.20001H259.412V108H243.14L224.132 34.416H223.844V108H209.732V7.20001Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M283.569 21.6H267.009V7.20001H315.969V21.6H299.409V108H283.569V21.6Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M323.638 7.20001H366.838V21.6H339.478V48.24H361.222V62.64H339.478V93.6H366.838V108H323.638V7.20001Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M375.951 7.20001H395.823L411.231 67.536H411.519V7.20001H425.631V108H409.359L390.351 34.416H390.063V108H375.951V7.20001Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M437.404 7.20001H461.596C469.468 7.20001 475.372 9.31201 479.308 13.536C483.244 17.76 485.212 23.952 485.212 32.112V83.088C485.212 91.248 483.244 97.44 479.308 101.664C475.372 105.888 469.468 108 461.596 108H437.404V7.20001ZM461.308 93.6C463.9 93.6 465.868 92.832 467.212 91.296C468.652 89.76 469.372 87.264 469.372 83.808V31.392C469.372 27.936 468.652 25.44 467.212 23.904C465.868 22.368 463.9 21.6 461.308 21.6H453.244V93.6H461.308Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M5.26337 180.2H29.4554C37.3274 180.2 43.2314 182.312 47.1674 186.536C51.1034 190.76 53.0714 196.952 53.0714 205.112V256.088C53.0714 264.248 51.1034 270.44 47.1674 274.664C43.2314 278.888 37.3274 281 29.4554 281H5.26337V180.2ZM29.1674 266.6C31.7594 266.6 33.7274 265.832 35.0714 264.296C36.5114 262.76 37.2314 260.264 37.2314 256.808V204.392C37.2314 200.936 36.5114 198.44 35.0714 196.904C33.7274 195.368 31.7594 194.6 29.1674 194.6H21.1034V266.6H29.1674Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M63.7634 180.2H106.963V194.6H79.6034V221.24H101.347V235.64H79.6034V266.6H106.963V281H63.7634V180.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M111.9 180.2H127.884L138.252 258.392H138.54L148.908 180.2H163.452L148.188 281H127.164L111.9 180.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M171.06 180.2H214.26V194.6H186.9V221.24H208.644V235.64H186.9V266.6H214.26V281H171.06V180.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M223.373 180.2H239.213V266.6H265.277V281H223.373V180.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M295.206 282.44C287.43 282.44 281.478 280.232 277.35 275.816C273.222 271.4 271.158 265.16 271.158 257.096V204.104C271.158 196.04 273.222 189.8 277.35 185.384C281.478 180.968 287.43 178.76 295.206 178.76C302.982 178.76 308.934 180.968 313.062 185.384C317.19 189.8 319.254 196.04 319.254 204.104V257.096C319.254 265.16 317.19 271.4 313.062 275.816C308.934 280.232 302.982 282.44 295.206 282.44ZM295.206 268.04C300.678 268.04 303.414 264.728 303.414 258.104V203.096C303.414 196.472 300.678 193.16 295.206 193.16C289.734 193.16 286.998 196.472 286.998 203.096V258.104C286.998 264.728 289.734 268.04 295.206 268.04Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M329.966 180.2H353.294C361.166 180.2 367.071 182.312 371.007 186.536C374.943 190.76 376.911 196.952 376.911 205.112V215.048C376.911 223.208 374.943 229.4 371.007 233.624C367.071 237.848 361.166 239.96 353.294 239.96H345.806V281H329.966V180.2ZM353.294 225.56C355.886 225.56 357.807 224.84 359.055 223.4C360.399 221.96 361.07 219.512 361.07 216.056V204.104C361.07 200.648 360.399 198.2 359.055 196.76C357.807 195.32 355.886 194.6 353.294 194.6H345.806V225.56H353.294Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M385.513 180.2H428.713V194.6H401.353V221.24H423.097V235.64H401.353V266.6H428.713V281H385.513V180.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M437.826 180.2H461.298C469.458 180.2 475.41 182.12 479.154 185.96C482.898 189.704 484.77 195.512 484.77 203.384V209.576C484.77 220.04 481.314 226.664 474.402 229.448V229.736C478.242 230.888 480.93 233.24 482.466 236.792C484.098 240.344 484.914 245.096 484.914 251.048V268.76C484.914 271.64 485.01 273.992 485.202 275.816C485.394 277.544 485.874 279.272 486.642 281H470.514C469.938 279.368 469.554 277.832 469.362 276.392C469.17 274.952 469.074 272.36 469.074 268.616V250.184C469.074 245.576 468.306 242.36 466.77 240.536C465.33 238.712 462.786 237.8 459.138 237.8H453.666V281H437.826V180.2ZM459.426 223.4C462.594 223.4 464.946 222.584 466.482 220.952C468.114 219.32 468.93 216.584 468.93 212.744V204.968C468.93 201.32 468.258 198.68 466.914 197.048C465.666 195.416 463.65 194.6 460.866 194.6H453.666V223.4H459.426Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M191.566 455.44C183.79 455.44 177.838 453.232 173.71 448.816C169.582 444.4 167.518 438.16 167.518 430.096V377.104C167.518 369.04 169.582 362.8 173.71 358.384C177.838 353.968 183.79 351.76 191.566 351.76C199.342 351.76 205.294 353.968 209.422 358.384C213.55 362.8 215.614 369.04 215.614 377.104V430.096C215.614 438.16 213.55 444.4 209.422 448.816C205.294 453.232 199.342 455.44 191.566 455.44ZM191.566 441.04C197.038 441.04 199.774 437.728 199.774 431.104V376.096C199.774 369.472 197.038 366.16 191.566 366.16C186.094 366.16 183.358 369.472 183.358 376.096V431.104C183.358 437.728 186.094 441.04 191.566 441.04Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M248.79 455.44C241.11 455.44 235.254 453.28 231.222 448.96C227.19 444.544 225.174 438.256 225.174 430.096V377.104C225.174 368.944 227.19 362.704 231.222 358.384C235.254 353.968 241.11 351.76 248.79 351.76C256.47 351.76 262.326 353.968 266.358 358.384C270.39 362.704 272.406 368.944 272.406 377.104V385.744H257.43V376.096C257.43 369.472 254.694 366.16 249.222 366.16C243.75 366.16 241.014 369.472 241.014 376.096V431.248C241.014 437.776 243.75 441.04 249.222 441.04C254.694 441.04 257.43 437.776 257.43 431.248V411.52H249.51V397.12H272.406V430.096C272.406 438.256 270.39 444.544 266.358 448.96C262.326 453.28 256.47 455.44 248.79 455.44Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M282.576 353.2H302.448L317.856 413.536H318.144V353.2H332.256V454H315.984L296.976 380.416H296.688V454H282.576V353.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M347.773 454.576C344.893 454.576 342.445 454.384 340.429 454V439.6C341.965 439.984 343.693 440.176 345.613 440.176C348.781 440.176 351.133 439.408 352.669 437.872C354.205 436.24 354.973 433.792 354.973 430.528V353.2H370.813V430.096C370.813 438.352 368.893 444.496 365.053 448.528C361.309 452.56 355.549 454.576 347.773 454.576Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M382.138 353.2H425.338V367.6H397.978V394.24H419.722V408.64H397.978V439.6H425.338V454H382.138V353.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M434.451 353.2H454.323L469.731 413.536H470.019V353.2H484.131V454H467.859L448.851 380.416H448.563V454H434.451V353.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M131.966 526.2H155.294C163.166 526.2 169.07 528.312 173.006 532.536C176.942 536.76 178.91 542.952 178.91 551.112V561.048C178.91 569.208 176.942 575.4 173.006 579.624C169.07 583.848 163.166 585.96 155.294 585.96H147.806V627H131.966V526.2ZM155.294 571.56C157.886 571.56 159.806 570.84 161.054 569.4C162.398 567.96 163.07 565.512 163.07 562.056V550.104C163.07 546.648 162.398 544.2 161.054 542.76C159.806 541.32 157.886 540.6 155.294 540.6H147.806V571.56H155.294Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M210.409 628.44C202.633 628.44 196.681 626.232 192.553 621.816C188.425 617.4 186.361 611.16 186.361 603.096V550.104C186.361 542.04 188.425 535.8 192.553 531.384C196.681 526.968 202.633 524.76 210.409 524.76C218.185 524.76 224.137 526.968 228.265 531.384C232.393 535.8 234.457 542.04 234.457 550.104V603.096C234.457 611.16 232.393 617.4 228.265 621.816C224.137 626.232 218.185 628.44 210.409 628.44ZM210.409 614.04C215.881 614.04 218.617 610.728 218.617 604.104V549.096C218.617 542.472 215.881 539.16 210.409 539.16C204.937 539.16 202.201 542.472 202.201 549.096V604.104C202.201 610.728 204.937 614.04 210.409 614.04Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M245.17 526.2H268.498C276.37 526.2 282.274 528.312 286.21 532.536C290.146 536.76 292.114 542.952 292.114 551.112V561.048C292.114 569.208 290.146 575.4 286.21 579.624C282.274 583.848 276.37 585.96 268.498 585.96H261.01V627H245.17V526.2ZM268.498 571.56C271.09 571.56 273.01 570.84 274.258 569.4C275.602 567.96 276.274 565.512 276.274 562.056V550.104C276.274 546.648 275.602 544.2 274.258 542.76C273.01 541.32 271.09 540.6 268.498 540.6H261.01V571.56H268.498Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M323.612 628.44C315.836 628.44 309.884 626.232 305.756 621.816C301.628 617.4 299.565 611.16 299.565 603.096V550.104C299.565 542.04 301.628 535.8 305.756 531.384C309.884 526.968 315.836 524.76 323.612 524.76C331.388 524.76 337.341 526.968 341.469 531.384C345.597 535.8 347.66 542.04 347.66 550.104V603.096C347.66 611.16 345.597 617.4 341.469 621.816C337.341 626.232 331.388 628.44 323.612 628.44ZM323.612 614.04C329.084 614.04 331.82 610.728 331.82 604.104V549.096C331.82 542.472 329.084 539.16 323.612 539.16C318.14 539.16 315.404 542.472 315.404 549.096V604.104C315.404 610.728 318.14 614.04 323.612 614.04Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M353.915 526.2H369.899L380.268 604.392H380.555L390.924 526.2H405.468L390.203 627H369.18L353.915 526.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M413.076 526.2H428.916V627H413.076V526.2Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M463.099 628.44C455.515 628.44 449.707 626.28 445.675 621.96C441.739 617.64 439.771 611.544 439.771 603.672V549.528C439.771 541.656 441.739 535.56 445.675 531.24C449.707 526.92 455.515 524.76 463.099 524.76C470.683 524.76 476.443 526.92 480.379 531.24C484.411 535.56 486.427 541.656 486.427 549.528V560.184H471.451V548.52C471.451 542.28 468.811 539.16 463.531 539.16C458.251 539.16 455.611 542.28 455.611 548.52V604.824C455.611 610.968 458.251 614.04 463.531 614.04C468.811 614.04 471.451 610.968 471.451 604.824V589.416H486.427V603.672C486.427 611.544 484.411 617.64 480.379 621.96C476.443 626.28 470.683 628.44 463.099 628.44Z"
+          stroke="white"
+          stroke-width="5"
+          mask="url(#path-1-outside-1)"
+        />
+      </svg>
+      <div class="profile-container">
+        <img id="profile-img" src="img/profile-pic.png" alt="Profile picture" />
+      </div>
+    </section>
 
     <!-- PROJECTS -->
     <section class="section-projects" id="section-projects">
-        
-        <h2 data-text="&#60;Projects&#62;" class="heading-secondary">&#60;Projects&#62;</h2>
-        <!-- Card 1 -->
-        <div class="section-projects--container">
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--1">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--1">
-                            Budgety
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-1">
-                    <div class="card__cta">
-                        <div class="btn-container budgety">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/Budgety"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/Budgety/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
+      <h2 data-text="&#60;Projects&#62;" class="heading-secondary">
+        &#60;Projects&#62;
+      </h2>
+      <!-- Card 1 -->
+      <div class="section-projects--container">
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--1">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--1">
+                Budgety
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-1">
+            <div class="card__cta">
+              <div class="btn-container budgety">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/Budgety"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/Budgety/"
+                  ><span>Live</span></a
+                >
+              </div>
             </div>
-
-            <!-- Card 2 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--2">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--2">
-                            Buthcer Shop
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-2">
-                    <div class="card__cta">
-                        <div class="btn-container butcher">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/mesara"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/mesara/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--3">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--3">
-                            Gym
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-3">
-                    <div class="card__cta">
-                        <div class="btn-container gym">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/Teretana"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/Teretana/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--5">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--5">
-                            Bankist
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-5">
-                    <div class="card__cta">
-                        <div class="btn-container bankist">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/Bankist"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/Bankist/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--6">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--6">
-                            Geolocation app
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-6">
-                    <div class="card__cta">
-                        <div class="btn-container geolocation-app">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/geolocationApp"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/geolocationApp/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--7">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--7">
-                            Mini projects
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-7">
-                    <div class="card__cta">
-                        <div class="btn-container mini-projects">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/Mini%20projects"><span>See Code</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 8 -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--8">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--8">
-                            Natours
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-8">
-                    <div class="card__cta">
-                        <div class="btn-container natours">
-                            <a target="_blank" href="https://github.com/gilenzi/Projekti/tree/master/Natours"><span>See Code</span></a>
-                            <a target="_blank" href="https://gilenzi.github.io/Projekti/Natours/"><span>Live</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 9  -->
-
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--9">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--9">
-                            Wordpress
-                        </span>
-                    </h4>
-                </div>
-                <div class="card__side card__side--back card__side--back-9">
-                    <div class="card__cta">
-                        <div class="btn-container mini-projects">
-                            <a target="_blank" href="https://agrobest.rs/"><span>Agro Best</span></a>
-                            <a target="_blank" href="https://www.marketserviszlatko.com/"><span>Market Servis Zlatko</span></a>
-                            <a target="_blank" href="https://www.stecomboje.rs/"><span>Stecom Boje</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <!-- Card 2 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--2">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--2">
+                Buthcer Shop
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-2">
+            <div class="card__cta">
+              <div class="btn-container butcher">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/mesara"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/mesara/"
+                  ><span>Live</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--3">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--3">
+                Gym
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-3">
+            <div class="card__cta">
+              <div class="btn-container gym">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/Teretana"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/Teretana/"
+                  ><span>Live</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--5">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--5">
+                Bankist
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-5">
+            <div class="card__cta">
+              <div class="btn-container bankist">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/Bankist"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/Bankist/"
+                  ><span>Live</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--6">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--6">
+                Geolocation app
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-6">
+            <div class="card__cta">
+              <div class="btn-container geolocation-app">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/geolocationApp"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/geolocationApp/"
+                  ><span>Live</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--7">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--7">
+                Mini projects
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-7">
+            <div class="card__cta">
+              <div class="btn-container mini-projects">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/Mini%20projects"
+                  ><span>See Code</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--8">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--8">
+                Natours
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-8">
+            <div class="card__cta">
+              <div class="btn-container natours">
+                <a
+                  target="_blank"
+                  href="https://github.com/gilenzi/Projekti/tree/master/Natours"
+                  ><span>See Code</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://gilenzi.github.io/Projekti/Natours/"
+                  ><span>Live</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9  -->
+
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture--9">&nbsp;</div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--9">
+                Wordpress
+              </span>
+            </h4>
+          </div>
+          <div class="card__side card__side--back card__side--back-9">
+            <div class="card__cta">
+              <div class="btn-container mini-projects">
+                <a target="_blank" href="https://agrobest.rs/"
+                  ><span>Agro Best</span></a
+                >
+                <a target="_blank" href="https://www.marketserviszlatko.com/"
+                  ><span>Market Servis Zlatko</span></a
+                >
+                <a target="_blank" href="https://www.stecomboje.rs/"
+                  ><span>Stecom Boje</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section-skills" id="section-skills">
-        <h2 data-text="&#60;Skills&#62;" class="heading-secondary">&#60;Skills&#62;</h2>
+      <h2 data-text="&#60;Skills&#62;" class="heading-secondary">
+        &#60;Skills&#62;
+      </h2>
 
-        <div class="skills-container">
-            <h3 class="html">H<span>T</span>M<span>L</span></h3>
-            <div class="css-box">
-                <h3 class="css">CSS</h3>
-                <p class="css-paragraph">Of course SCSS included</p>
-            </div>
+      <div class="skills-container">
+        <h3 class="html">H<span>T</span>M<span>L</span></h3>
+        <div class="css-box">
+          <h3 class="css">CSS</h3>
+          <p class="css-paragraph">Of course SCSS included</p>
         </div>
-        
-        <!-- Blobs -->
-        <div class="skills-container">
-            <h3 class="wordpress"><span>Word</span><span>Press</span></h3>
-            <h3 class="bootstrap">
-                <span>B</span>
-                <span>O</span>
-                <span>O</span>
-                <span>T</span>
-                <span>S</span>
-                <span>T</span>
-                <span>R</span>
-                <span>A</span>
-                <span>P</span>
-            </h3>
-        </div>
+      </div>
 
-        <div class="skills-container">
-            <h3 class="js"><span>J</span> <span>S</span></h3>
-            <h3 class="php"><span>P</span> <span>H</span> <span>P</span></h3>
-        </div>
-        <div class="skills-container">
-            <h3 class="sql"><span>S</span> <span>Q</span> <span>L</span></h3>
-        </div>
-        <!-- <svg id="blob" id="visual" viewBox="0 0 300 300" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(135.28259839021416 128.35441521600256)"><path id="blob1" d="M41.1 -47.6C58.1 -34.6 80.3 -26.3 89.6 -10.4C98.9 5.6 95.3 29.3 85.3 51.6C75.2 73.9 58.6 94.7 34.8 109.4C10.9 124 -20.2 132.5 -35.3 117.9C-50.4 103.3 -49.6 65.7 -53.2 40.1C-56.8 14.5 -64.8 0.8 -65.5 -14.3C-66.2 -29.5 -59.4 -46.2 -47.3 -60C-35.1 -73.9 -17.6 -84.9 -2.8 -81.6C12 -78.3 24 -60.6 41.1 -47.6" fill="#ffffff"></path></g>
-            <g transform="translate(170.16347310757766 166.1217981700411)"><path style="visibility: hidden;" id="blob2" d="M65.2 -80.4C78.2 -66.9 78 -40.3 74.9 -19C71.8 2.4 65.8 18.4 55.1 27.1C44.5 35.8 29.3 37.2 16.6 39C3.9 40.7 -6.3 42.9 -30.3 49C-54.2 55.1 -92.1 65 -107.9 54.2C-123.7 43.5 -117.5 11.9 -99.9 -5.4C-82.2 -22.7 -53.2 -25.7 -34.6 -38.3C-16.1 -50.8 -8 -72.9 9.1 -83.7C26.1 -94.5 52.3 -94 65.2 -80.4" fill="#ffffff"></path></g>
-            </svg> -->
+      <!-- Blobs -->
+      <div class="skills-container">
+        <h3 class="wordpress"><span>Word</span><span>Press</span></h3>
+        <h3 class="bootstrap">
+          <span>B</span>
+          <span>O</span>
+          <span>O</span>
+          <span>T</span>
+          <span>S</span>
+          <span>T</span>
+          <span>R</span>
+          <span>A</span>
+          <span>P</span>
+        </h3>
+      </div>
+
+      <div class="skills-container">
+        <h3 class="js"><span>J</span> <span>S</span></h3>
+        <h3 class="php"><span>P</span> <span>H</span> <span>P</span></h3>
+      </div>
+      <div class="skills-container">
+        <h3 class="sql"><span>S</span> <span>Q</span> <span>L</span></h3>
+        <h3 class="typescript">
+          <span>T</span> <span>Y</span> <span>P</span><span>E</span
+          ><span>S</span><span>C</span><span>R</span><span>I</span><span>P</span
+          ><span>T</span>
+        </h3>
+      </div>
+
+      <div class="skills-container">
+        <h3 class="react">
+          <span>R</span> <span>E</span> <span>A</span><span>C</span
+          >T<span>
+        </h3>
+        <h3 class="svelte">
+            <span>S</span> <span>V</span> <span>E</span><span>L</span
+            ><span>T</span><span>E</span>
+        </h3>
+        <h3 class="svelte-kit">
+            <span>S</span> <span>V</span> <span>E</span><span>L</span
+            ><span>T</span><span>E</span>  <span>K</span><span>I</span><span>T</span>
+        </h3>
+      </div>
     </section>
 
     <section class="section-about" id="section-about-me">
-        <h2  data-text="&#60;About&rarr;me&#62;" class="heading-secondary">&#60;About&rarr;me&#62;</h2>
+      <h2 data-text="&#60;About&rarr;me&#62;" class="heading-secondary">
+        &#60;About&rarr;me&#62;
+      </h2>
 
-        <div class="container-about">
-            <p class="text-about">Hi! My name is Ognjen Popović, and I'm web & frontend developer located in Belgrade, Serbia, graduated from the faculty of Computer Science, department for Information technology.
-                I like to make web applications and websites, because it's so interesting and it's almost never the same. 
-                Constantly challenging myself, because I want to be the best version of me as developer. I'm keen in accruing new 
-                knowledges because I want to provide the enjoyment and the best possible experience for clients out there.
-                Besides programming, I love nature and I love activities that compensate  sitting at a computer.</p>
-                <h3 id="section-contact" class="contact-me">Contact me</h3>
-                <a href="mailto:jasamtajogy@gmail.com" class="contact-email">jasamtajogy@gmail.com</a>
-        </div>
+      <div class="container-about">
+        <p class="text-about">
+          Hi! My name is Ognjen Popović, and I'm web & frontend developer
+          located in Belgrade, Serbia, graduated from the faculty of Computer
+          Science, department for Information technology. I like to make web
+          applications and websites, because it's so interesting and it's almost
+          never the same. Constantly challenging myself, because I want to be
+          the best version of me as developer. I'm keen in accruing new
+          knowledges because I want to provide the enjoyment and the best
+          possible experience for clients out there. Besides programming, I love
+          nature and I love activities that compensate sitting at a computer.
+        </p>
+        <h3 id="section-contact" class="contact-me">Contact me</h3>
+        <a href="mailto:jasamtajogy@gmail.com" class="contact-email"
+          >jasamtajogy@gmail.com</a
+        >
+      </div>
     </section>
 
     <a id="goTop" href="#section-main">
-        <i class="fas fa-space-shuttle fa-4x"></i>
+      <i class="fas fa-space-shuttle fa-4x"></i>
     </a>
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.1.0/kute.min.js" integrity="sha512-7uloHIcXau3ZvKLsE+Y+WL/UPuwPwehfQZsnEymTBEIcPNxYQD88fmK5Y7aAXPXk3kgRYR7rD1dDMcEyPk6ukg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.1.0/kute.min.js"
+      integrity="sha512-7uloHIcXau3ZvKLsE+Y+WL/UPuwPwehfQZsnEymTBEIcPNxYQD88fmK5Y7aAXPXk3kgRYR7rD1dDMcEyPk6ukg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>

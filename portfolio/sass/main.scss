@@ -1,23 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 // // Abstracts
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
 // // Base
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import './skills-animations/skills-animations.scss';
 
 // // Components
-@import "components/card";
-@import "components/button";
-@import "components/goToTop";
+@import 'components/card';
+@import 'components/button';
+@import 'components/goToTop';
 
 // // Pages
-@import "pages/home";
+@import 'pages/home';
 
 // // Layout
-@import "layout/footer";
-@import "layout/navigation";
-@import "layout/header";
+@import 'layout/footer';
+@import 'layout/navigation';
+@import 'layout/header';
